@@ -5,6 +5,10 @@ layout: default
 <main class="home">
     <section>
         <h2>Contact</h2>
+        <ul>
+        	<li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+        	<li>{% include icon-github.html username=site.github_username %}</li>
+        </ul>
     </section>
     <section>
         <h2>Projects</h2>
