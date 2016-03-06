@@ -2,16 +2,22 @@
 layout: default
 ---
 
-<main class="home">
-    <section>
-        <h2>Contact</h2>
+<main class="home wrapper">
+    <div class="home-menu">
+        <ul>
+            <li data-section="contact"><h2>Contact</h2></li>
+            <li data-section="projects"><h2>Projects</h2></li>
+        </ul>
+    </div>
+    <section class="home-section" data-section="contact">
+        <h2 class="section-heading">Contact</h2>
         <ul>
         	<li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
         	<li>{% include icon-github.html username=site.github_username %}</li>
         </ul>
     </section>
-    <section>
-        <h2>Projects</h2>
+    <section class="home-section" data-section="projects">
+        <h2 class="section-heading">Projects</h2>
         <ul>
             {% for post in site.posts %}
                 <li>
