@@ -10,6 +10,22 @@
     }
 }
 
+.home-menu{
+	display: none;
+	ul{
+		display: flex;
+		justify-content: space-between;
+	}
+	li{
+		cursor: pointer;
+	}
+	h2{
+		font-weight: normal;
+	}
+	li.active h2{
+		font-weight: 600;
+	}
+}
 
 /**
  * Site footer
