@@ -2,3 +2,21 @@
     <div class="wrapper">
     </div>
 </footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script>
+	/*
+	 * Hide and show sections based on menu title clicked
+	 */
+	(function($){
+		var menu_headings = $('.home-menu li');
+		var home_sections = $('.home-section');
+	    $('.home-menu li').on('click', function(event) {
+	    	menu_headings.removeClass('active');
+	    	var clicked = $(this);
+	    	clicked.addClass('active');
+	    	var section_key = clicked.data('section');
+	    	home_sections.hide();
+	    	$(".home-section[data-section='" + section_key + "']").show();
+	    });
+	})(jQuery);
+</script>
