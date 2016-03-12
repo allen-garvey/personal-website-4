@@ -1,0 +1,8 @@
+ <li>
+    <h3>{{ post.title }}</h3>
+    <div>
+        {{ post.content }}
+        <span><a href="https://github.com/{{ site.github_username }}/{{ post.github }}">GitHub</a></span>
+        <span><a href="{{ post.project_url }}">{{ post.project_url_short }}</a></span>
+    </div>
+</li>
