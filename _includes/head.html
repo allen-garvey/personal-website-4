@@ -7,11 +7,6 @@
 	<link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
 	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 	<script>
-		//progressive enhancement for people without js
-		document.write("<style>" +
-							".home-menu{ display: block; }" +
-							".home-section{ display: none; }" +
-							".home-section .section-heading{ display: none; }" +
-						"</style>");
+		document.documentElement.className = 'js';
 	</script>
 </head>
