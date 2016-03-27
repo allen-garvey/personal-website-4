@@ -2,11 +2,12 @@
  * Site header
  */
 .site-header {
-    margin-top: 6em;
+    padding-top: 6em;
     text-align: center;
     .author_img{
         width: 140px;
         border-radius: 50%;
+        @include material;
     }
 }
 
@@ -23,6 +24,11 @@
 	}
 	h2{
 		font-weight: normal;
+		// padding: 0.2em 0.8em;
+		padding: 0.1em 0.4em;
+	}
+	li.active h2, li:hover h2{
+		@include material_active;
 	}
 	li.active h2{
 		font-weight: 600;
