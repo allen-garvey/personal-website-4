@@ -53,6 +53,12 @@
 
 .home-menu{
 	display: none;
+	a{
+		color: inherit;
+		&:hover{
+			text-decoration: none;
+		}
+	}
 	ul{
 		display: flex;
 		justify-content: space-between;
@@ -89,15 +95,3 @@
 		display: none; 
 	}
 }
-
-
-/**
- * Site footer
- */
-.site-footer {
-    padding: $spacing-unit 0;
-}
-
-
-
-
