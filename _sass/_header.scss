@@ -80,6 +80,13 @@
 	}
 }
 
+.home-section{ 
+	padding-top: 1em;
+	.section-heading{
+		margin-bottom: 0.1em;
+	}
+}
+
 /*
 * Progressive enhancement for browsers with JS
 */
@@ -88,7 +95,7 @@
 		display: block; 
 	}
 	.home-section{ 
-		display: none; 
+		display: none;
 	}
 	.home-section .section-heading{ 
 		display: none; 
