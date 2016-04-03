@@ -18,5 +18,11 @@
 	    	home_sections.hide();
 	    	$(".home-section[data-section='" + section_key + "']").show();
 	    });
+
+	    //routing
+	    var section_url = window.location.href.replace(/^.+#/, '');
+	    if(section_url){
+	    	$('.home-menu li[data-section="' + section_url +'"]').click();
+	    }
 	})(jQuery);
 </script>
