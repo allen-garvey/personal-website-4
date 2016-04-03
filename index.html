@@ -13,7 +13,7 @@ layout: default
     <section class="home-section" data-section="projects" id="projects">
         <h2 class="section-heading">Projects</h2>
         <ul>
-            {% for post in site.posts reversed %}
+            {% for post in site.posts %}
                {% include project.html %}
             {% endfor %}
         </ul>
