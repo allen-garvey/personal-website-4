@@ -3,8 +3,10 @@
     <div>
         {{ post.content }}
         <div class="project-links">
-        	<span class="project-demo-link"><a href="{{ post.project_url }}">Demo</a></span>
         <span class="project-source-link"><a href="https://github.com/{{ site.github_username }}/{{ post.github }}">Source</a></span>
+        {% if post.project_url %}
+        	<span class="project-demo-link"><a href="{{ post.project_url }}">Demo</a></span>
+        {% endif %}
         </div>
     </div>
 </li>
