@@ -1,0 +1,6 @@
+---
+title:  			"Wordpop"
+date:   			2015-08-15 20:00:00
+github: 			wordpop-node
+---
+I wanted some practice in data visualization and creating infographics, so I created this web app using d3.js and node.js to dynamically display word frequencies in Craigslist listings in scatterplot and bar graph formats.

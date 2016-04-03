@@ -1,0 +1,7 @@
+---
+title:  			"H-News"
+date:   			2015-06-28 20:00:00
+github: 			h-news
+project_url:		http://hnews.co
+---
+A redesign of Hacker News with an emphasis on mobile first design and usability. Uses the official Hacker News API for story data and jQuery to populate the page with stories using AJAX.
