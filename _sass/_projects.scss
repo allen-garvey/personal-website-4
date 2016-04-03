@@ -1,0 +1,16 @@
+.project-links{
+	span:nth-of-type(2n){
+		margin-left: 2em;
+		@include media-query($on-laptop) {
+			margin-left: 5em;	
+		}
+	}
+}
+
+.projects-list li{
+	margin-bottom: 2em;
+}
+
+.project-title{
+	margin-bottom: 0.1em;
+}
