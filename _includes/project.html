@@ -2,9 +2,9 @@
     <h3>{{ post.title }}</h3>
     <div>
         {{ post.content }}
-        <div class="project_links">
-        	<span><a href="{{ post.project_url }}">{{ post.project_url_short }}</a></span>
-        <span><a href="https://github.com/{{ site.github_username }}/{{ post.github }}">GitHub</a></span>
+        <div class="project-links">
+        	<span class="project-demo-link"><a href="{{ post.project_url }}">Demo</a></span>
+        <span class="project-source-link"><a href="https://github.com/{{ site.github_username }}/{{ post.github }}">Source</a></span>
         </div>
     </div>
 </li>
