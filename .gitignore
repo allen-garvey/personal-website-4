@@ -8,12 +8,7 @@ _site
 .sass-cache
 .sass-cache/*
 node_modules/*
-*.png
-*.gif
 *.bmp
-*.jpg
-*.jpeg
-*.ico
 Thumbs.db
 *.ttf
 *.otf
