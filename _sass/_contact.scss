@@ -1,0 +1,28 @@
+/**
+ * Icons
+ */
+.icon {
+
+    > svg {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        vertical-align: middle;
+
+        path {
+            fill: $grey-color;
+        }
+    }
+}
+
+.icon--email{
+	margin-right: 5px;
+}
+.contact-list{
+	li{
+		margin-bottom: 1em;
+		a:hover svg path{
+			fill: darken($grey-color, 50%);
+		}
+	}
+}
