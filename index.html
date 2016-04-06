@@ -5,10 +5,7 @@ layout: default
 <main class="home wrapper">
     <section class="home-section" data-section="contact" id="contact">
         <h2 class="section-heading">Contact</h2>
-        <ul>
-        	<li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-        	<li>{% include icon-github.html username=site.github_username %}</li>
-        </ul>
+        {% include contact-list.html %}
     </section>
     <section class="home-section" data-section="projects" id="projects">
         <h2 class="section-heading">Projects</h2>
