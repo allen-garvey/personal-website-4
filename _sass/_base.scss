@@ -139,6 +139,9 @@ a {
     }
 }
 
-
+//hide if js not enabled
+.no-js .show-js{
+    display: none;
+}
 
 
