@@ -51,7 +51,6 @@
 }
 
 .home-menu{
-	display: none;
 	a{
 		color: inherit;
 		&:hover{
@@ -82,22 +81,13 @@
 
 .home-section{ 
 	padding-top: 1em;
-	.section-heading{
-		margin-bottom: 0.1em;
-	}
-}
-
-/*
-* Progressive enhancement for browsers with JS
-*/
-.js{
-	.home-menu{ 
-		display: block; 
-	}
-	.home-section{ 
+	.js &{
 		display: none;
 	}
-	.home-section .section-heading{ 
-		display: none; 
+	.section-heading{
+		margin-bottom: 0.1em;
+		.js &{
+			display: none;
+		}
 	}
 }
