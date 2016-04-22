@@ -15,3 +15,5 @@ Thumbs.db
 *.eot
 *.woff
 *.zip
+_includes/*.js
+_includes/*.map
