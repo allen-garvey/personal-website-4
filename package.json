@@ -1,0 +1,26 @@
+{
+  "name": "allen-garvey-jekyll",
+  "version": "1.0.0",
+  "description": "Personal website of Allen Garvey",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/allen-garvey/allen-garvey-jekyll.git"
+  },
+  "author": "Allen Garvey",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/allen-garvey/allen-garvey-jekyll/issues"
+  },
+  "homepage": "https://github.com/allen-garvey/allen-garvey-jekyll#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-uglify": "^1.2.0"
+  }
+}
