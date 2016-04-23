@@ -19,6 +19,17 @@ config.js.app_files = config.js.app_files.map(function(file){return config.js.SO
 config.js.head_files = config.js.head_files.map(function(file){return config.js.SOURCE_DIR + file + '.js';});
 
 
+/*
+* Sass/Styles configuration
+*/
+config.styles = {};
+config.styles.SOURCE_DIR = __dirname + '/_sass/';
+config.styles.DEST_DIR = __dirname + '/css/';
+config.styles.sass_options = {
+  errLogToConsole: true,
+  // sourceComments: true, //turns on line number comments 
+  outputStyle: 'compressed' //options: expanded, nested, compact, compressed
+};
 
 
 /*
