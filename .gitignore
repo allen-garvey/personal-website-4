@@ -17,3 +17,4 @@ Thumbs.db
 *.zip
 _includes/*.js
 _includes/*.map
+css/*
