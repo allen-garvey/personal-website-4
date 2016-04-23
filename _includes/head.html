@@ -8,18 +8,5 @@
 		<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 		<link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
 		<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-		<script>
-			/*
-			 * Set html element classes
-			 */
-			(function(){
-				var classes = ['js'];
-				var now = new Date();
-				var currentHour = now.getHours();
-				if(currentHour >= 20 || currentHour <= 6){
-					classes.push('night');
-				}
-			    document.documentElement.className = classes.join(' ');
-			})();
-		</script>
+		<script>{% include head.min.js %}</script>
 	</head>
