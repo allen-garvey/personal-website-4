@@ -6,7 +6,7 @@
 	var home_sections = $('.home-section');
     var homepage_text = $('#homepage-text');
     $('.home-menu li').on('click', function(event) {
-    	homepage_text.hide();
+        homepage_text.hide();
     	menu_headings.removeClass('active');
     	var clicked = $(this);
     	clicked.addClass('active');
@@ -33,4 +33,4 @@
     router();
     //change route on hash url change
     window.addEventListener("hashchange", router, false)
-})(jQuery);
+})(aQuery);
