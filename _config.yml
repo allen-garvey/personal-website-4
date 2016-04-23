@@ -16,6 +16,7 @@ github_username:  allen-garvey
 
 # Build settings
 markdown: kramdown
+permalink: projects/:title
 
 exclude:
   - allen-garvey-jekyll.sublime-workspace
