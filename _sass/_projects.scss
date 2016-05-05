@@ -9,8 +9,16 @@
 
 .projects-list li{
 	margin-bottom: 2em;
+	display: flex;
 }
 
 .project-title{
 	margin-bottom: 0.1em;
+}
+.project-logo{
+	padding: 1em;
+	flex-basis: 100px;
+}
+.project-content{
+	flex-basis: 95%;
 }
