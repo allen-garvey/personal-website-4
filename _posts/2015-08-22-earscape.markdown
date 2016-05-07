@@ -4,5 +4,6 @@ title:  			"Earscape"
 date:   			2015-08-22 20:00:00
 github: 			earscape
 project_url:		https://allen-garvey.github.io/earscape/
+logo_url:			earscape-icon.png
 ---
 One of my interests is the intersection of music with technology (particularly algorithmic composition), so I created this web app to generate random twelve tone melodies, using the band.js and vex-tab libraries to playback the melodies and generate the sheet music.
