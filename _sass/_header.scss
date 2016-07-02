@@ -20,6 +20,12 @@
 .header-text{
 	position: relative;
 	z-index: 100;
+	.site-title{
+		margin-bottom: 0;
+	}
+	p{
+		margin-bottom: 1.5em;
+	}
 }
 .header-text-overlay{
 	position: absolute;
