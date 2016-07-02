@@ -10,8 +10,8 @@ title: Allen Garvey | Full-stack Developer
 email: your-email@domain.com
 description: > # this means to ignore newlines until "baseurl:"
   Personal website for Allen Garvey, full-stack software developer
-baseurl: "/" # the subpath of your site, e.g. /blog
-url: "http://allen-garvey.com" # the base hostname & protocol for your site
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://allengarvey.com" # the base hostname & protocol for your site
 github_username:  allen-garvey
 
 # Build settings
