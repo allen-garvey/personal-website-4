@@ -6,10 +6,6 @@ layout: default
     <section id="homepage-text" data-section="about">
         {% include homepage_text.html %}
     </section>
-    <section class="home-section" data-section="contact">
-        <h2 class="section-heading">Contact</h2>
-        {% include contact-list.html %}
-    </section>
     <section class="home-section" data-section="projects">
         <h2 class="section-heading">Projects</h2>
         <ul class="projects-list">
@@ -17,5 +13,9 @@ layout: default
                {% include project.html %}
             {% endfor %}
         </ul>
+    </section>
+    <section class="home-section" data-section="contact">
+        <h2 class="section-heading">Contact</h2>
+        {% include contact-list.html %}
     </section>
 </main>
