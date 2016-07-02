@@ -12,7 +12,7 @@
     	clicked.addClass('active');
     	var section_key = clicked.data('section');
     	home_sections.hide();
-    	$(".home-section[data-section='" + section_key + "']").show();
+    	$("section[data-section='" + section_key + "']").show();
     });
 
     //routing
@@ -24,10 +24,8 @@
         	section_header.click();
         }
         else{
-            //404 - show homepage
-            home_sections.hide();
-            menu_headings.removeClass('active');
-            homepage_text.show();
+            //404 - show about section
+            $('.home-menu li[data-section="about"]').click();
         }
     }
     router();
