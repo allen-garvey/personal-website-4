@@ -16,3 +16,4 @@ Thumbs.db
 *.woff
 *.zip
 .directory
+inc/js/*
