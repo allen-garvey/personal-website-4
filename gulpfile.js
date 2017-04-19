@@ -4,7 +4,6 @@ var gulp = require('gulp');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
-var maps = require('gulp-sourcemaps');
 var sass = require('gulp-sass');
 
 var config = require(__dirname + '/gulp-config.js');
@@ -15,9 +14,7 @@ var config = require(__dirname + '/gulp-config.js');
 
 function concatScriptsWrapper(files, dist_name){
 	return gulp.src(files)
-		.pipe(maps.init())
 		.pipe(concat(dist_name + '.js'))
-		.pipe(maps.write('./'))
 		.pipe(gulp.dest(config.js.DEST_DIR));
 }
 
