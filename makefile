@@ -1,7 +1,7 @@
 SASS_SRC != find ./sass -type f -name '*.scss'
 
 
-all: main.css index.html 404.html
+all: main.css index.html 404.html js
 
 index.html:
 	php index.php > docs/index.html
@@ -11,3 +11,6 @@ index.html:
 
 main.css: $(SASS_SRC)
 	sassc --style compressed sass/main.scss docs/main.css
+
+js:
+	npm run gulp
