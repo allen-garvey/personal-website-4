@@ -1,8 +1,7 @@
 /**
  * Reset some basic elements
  */
-body, h1, h2, h3, h4, h5, h6,
-p, hr, ol, ul{
+body, h1, h2, h3, p, hr, ol, ul{
     margin: 0;
     padding: 0;
 }
@@ -29,10 +28,7 @@ body {
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
-h1, h2, h3, h4, h5, h6,
-p, blockquote, pre,
-ul, ol, dl, figure,
-%vertical-rhythm {
+h1, h2, h3, p, ul, ol{
     margin-bottom: $spacing-unit / 2;
 }
 
@@ -46,20 +42,6 @@ img {
 }
 
 
-
-/**
- * Figures
- */
-figure > img {
-    display: block;
-}
-
-figcaption {
-    font-size: $small-font-size;
-}
-
-
-
 /**
  * Lists
  */
@@ -71,7 +53,7 @@ ul{
 /**
  * Headings
  */
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3 {
     font-weight: $base-font-weight;
 }
 h1{
@@ -115,7 +97,6 @@ a {
     margin-left: auto;
     padding-right: $spacing-unit;
     padding-left: $spacing-unit;
-    @extend %clearfix;
 
     @include media-query($on-laptop) {
         max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
@@ -125,19 +106,6 @@ a {
     }
 }
 
-
-
-/**
- * Clearfix
- */
-%clearfix {
-
-    &:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
-}
 
 //hide if js not enabled
 .no-js .show-js{
