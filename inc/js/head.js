@@ -10,4 +10,3 @@
 	}
     document.documentElement.className = classes.join(' ');
 })();
-//# sourceMappingURL=head.js.map

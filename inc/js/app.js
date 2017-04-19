@@ -142,4 +142,3 @@ function aQuery(selector){
     document.getElementById('email_link').href = 'mailto:' + first + dot + second + at + fourth + dot + sixth;
     document.getElementById('email_text').innerHTML = first + dot + second + at + fourth + dot + sixth;
 })();
-//# sourceMappingURL=app.js.map
