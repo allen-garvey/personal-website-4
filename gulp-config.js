@@ -20,19 +20,6 @@ config.js.head_files = config.js.head_files.map(function(file){return config.js.
 
 
 /*
-* Sass/Styles configuration
-*/
-config.styles = {};
-config.styles.SOURCE_DIR = __dirname + '/_sass/';
-config.styles.DEST_DIR = __dirname + '/docs/';
-config.styles.sass_options = {
-  errLogToConsole: true,
-  // sourceComments: true, //turns on line number comments 
-  outputStyle: 'compressed' //options: expanded, nested, compact, compressed
-};
-
-
-/*
 * Export config
 */
 module.exports = config;

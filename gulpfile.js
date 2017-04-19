@@ -4,7 +4,6 @@ var gulp = require('gulp');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
-var sass = require('gulp-sass');
 
 var config = require(__dirname + '/gulp-config.js');
 
@@ -49,21 +48,9 @@ gulp.task('minifyScripts:head', ['concatScripts:head'], function(){
 
 
 /*
-* Sass/Styles Tasks
-*/
-gulp.task('sass', function() {
-    gulp.src(config.styles.SOURCE_DIR + '**/*.scss')
-        .pipe(sass(config.styles.sass_options).on('error', sass.logError))
-        .pipe(gulp.dest(config.styles.DEST_DIR));
-});
-
-/*
 * Watch tasks
 */
 
-gulp.task('watchSass',function() {
-    gulp.watch(config.styles.SOURCE_DIR + '**/*.scss', ['sass']);
-});
 
 gulp.task('watchScripts', function(){
 	gulp.watch(config.js.SOURCE_DIR + '**/*.js', ['minifyScripts:footer', 'minifyScripts:head']);
@@ -73,8 +60,8 @@ gulp.task('watchScripts', function(){
 /*
 * Main gulp tasks
 */
-gulp.task('watch', ['build', 'watchScripts', 'watchSass']);
-gulp.task('build', ['minifyScripts:footer', 'minifyScripts:head', 'sass']);
+gulp.task('watch', ['build', 'watchScripts']);
+gulp.task('build', ['minifyScripts:footer', 'minifyScripts:head']);
 gulp.task('default', ['build']);
 
 
