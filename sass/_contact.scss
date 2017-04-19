@@ -2,7 +2,8 @@
  * Icons
  */
 .icon {
-
+    display: inline-block;
+    margin-left: 1px;
     > svg {
         display: inline-block;
         width: 16px;
@@ -15,9 +16,6 @@
     }
 }
 
-.icon--email{
-	margin-right: 5px;
-}
 .contact-list{
 	li{
 		margin-bottom: 1em;
@@ -25,4 +23,11 @@
 			fill: darken($grey-color, 50%);
 		}
 	}
+}
+.contact-label{
+    display: inline-block;
+    min-width: 4em;
+    &:after{
+        content: ':';
+    }
 }
