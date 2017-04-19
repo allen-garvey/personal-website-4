@@ -7,7 +7,7 @@ var config = {};
 * JavaScript configuration
 */
 config.js = {};
-config.js.SOURCE_DIR = __dirname + '/_js_source/';
+config.js.SOURCE_DIR = __dirname + '/js_source/';
 config.js.DEST_DIR = __dirname + '/inc/js/';
 config.js.DIST_NAME = 'app'; //name of compiled file to be served i.e. app.js and app.min.js
 config.js.HEAD_DIST_NAME = 'head';
