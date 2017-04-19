@@ -1,7 +1,10 @@
 # Allen Garvey Personal Website
 
-The personal website of Allen Garvey, created with [Jekyll](http://jekyllrb.com)
+The personal website of Allen Garvey
 
 ## Dependencies
 
-* Jekyll 3.0.1
+* PHP 7.0 or later
+* npm
+* Node.js 4.2.6 or later
+* Make (to use makefile)
