@@ -3,11 +3,10 @@
  */
 .icon {
     display: inline-block;
-    margin-left: 1px;
     > svg {
         display: inline-block;
-        width: 16px;
-        height: 16px;
+        width: 24px;
+        height: 24px;
         vertical-align: middle;
 
         path {
@@ -26,7 +25,7 @@
 }
 .contact-label{
     display: inline-block;
-    min-width: 4em;
+    min-width: 4.5em;
     &:after{
         content: ':';
     }
