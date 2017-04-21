@@ -12,7 +12,7 @@
                             $imageLinkUrl = $project['url'];
                         }
                         else{
-                            $imageLinkUrl = 'https://github.com/allen-garvey/'.$project['github'];
+                            $imageLinkUrl = 'https://github.com/'.GITHUB_USER_URL.'/'.$project['github'];
                         }
                         require(TEMPLATES_PATH.'project.php');
                     })($project);

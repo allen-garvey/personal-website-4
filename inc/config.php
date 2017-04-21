@@ -1,4 +1,7 @@
 <?php 
+//site config
+define('GITHUB_USER_URL', 'allen-garvey');
+
 //paths
 define('ROOT_PATH', dirname(__FILE__, 2).'/');
 define('INC_PATH', ROOT_PATH.'inc/');
