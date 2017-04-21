@@ -8,6 +8,12 @@
             <?php 
                 foreach (projects() as $project) {
                     (function($project){
+                        if(array_key_exists('url', $project)){
+                            $imageLinkUrl = $project['url'];
+                        }
+                        else{
+                            $imageLinkUrl = 'https://github.com/allen-garvey/'.$project['github'];
+                        }
                         require(TEMPLATES_PATH.'project.php');
                     })($project);
                 }

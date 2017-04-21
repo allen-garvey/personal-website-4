@@ -1,5 +1,9 @@
  <li>
-    <div class="project-logo"><img src="<?= ICONS_URL.$project['logo_url'] ?>" alt="<?= $project['title'] ?> logo"></div>
+    <div class="project-logo">
+        <a href="<?= $imageLinkUrl ?>">
+            <img src="<?= ICONS_URL.$project['logo_url'] ?>" alt="<?= $project['title'] ?> logo">
+        </a>
+    </div>
     <div class="project-content">
         <h3 class="project-title"><?= $project['title'] ?></h3>     
         <div>
