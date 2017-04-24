@@ -1,6 +1,6 @@
 <header class="site-header">
     <a href="<?= BASE_URL ?>">
-        <img src="images/allen-garvey.jpg" alt="Photo of Allen Garvey" class="author_img">
+        <img src="/images/allen-garvey.jpg" alt="Photo of Allen Garvey" class="author_img">
     </a>
     <div class="header-text-container">
         <div class="header-text-overlay"></div>
