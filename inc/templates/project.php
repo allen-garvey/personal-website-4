@@ -5,7 +5,7 @@
         </a>
     </div>
     <div class="project-content">
-        <h3 class="project-title"><?= $project['title'] ?></h3>     
+        <h3 class="project-title"><a href="<?= $imageLinkUrl ?>"><?= $project['title'] ?></a></h3>     
         <div>
             <?= $project['description'] ?>
             <div class="project-links">
