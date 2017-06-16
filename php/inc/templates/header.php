@@ -9,9 +9,11 @@
             <p class="tagline">Full-stack developer, artist, and musician</p>
             <div class="home-menu show-js">
                 <ul>
-                    <li data-section="contact"><a href="<?= BASE_URL ?>#contact"><h2>Contact</h2></a></li>
-                    <li data-section="about"><a href="<?= BASE_URL ?>#about"><h2>About</h2></a></li>
-                    <li data-section="projects"><a href="<?= BASE_URL ?>#projects"><h2>Projects</h2></a></li>
+                    <?php foreach(['Contact', 'About', 'Projects'] as $sectionHeading): ?>
+                        <li data-section="<?= strtolower($sectionHeading); ?>">
+                            <a href="<?= BASE_URL.'#'.strtolower($sectionHeading); ?>"><h2><?= $sectionHeading; ?></h2></a>
+                        </li>    
+                    <?php endforeach; ?>
                 </ul>
             </div>
         </div>
