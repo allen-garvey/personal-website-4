@@ -15,7 +15,7 @@
 	</li>
 	<li>
 		<span class="contact-label">Artwork</span>
-		<a href="https://strangescenery.com">
+		<a href="http://strangescenery.com">
 			<span>strangescenery.com</span>
 			<span class="icon"><?php require(SVG_PATH.'ei-image.svg'); ?></span>
 		</a>
