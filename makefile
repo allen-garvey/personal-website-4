@@ -1,4 +1,5 @@
 SASS_SRC != find ./sass -type f -name '*.scss'
+JS_SRC != find ./js_source -type f -name '*.js'
 
 PAGE_INDEX=docs/index.html
 PAGE_404=docs/404.html
@@ -18,7 +19,7 @@ $(PAGE_404): $(PAGE_INDEX)
 $(CSS_OUTPUT): $(SASS_SRC)
 	sassc --style compressed sass/main.scss $(CSS_OUTPUT)
 
-$(JS_OUTPUT):
+$(JS_OUTPUT): $(JS_SRC)
 	npm run gulp
 
 #watch tasks
