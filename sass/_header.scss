@@ -8,11 +8,11 @@
     background-repeat: no-repeat;
     background-position: center;
     background-image: url(/images/splash.png);
-    .author_img{
-        width: 140px;
-        border-radius: 50%;
-        @include material;
-    }
+}
+.author_img{
+    width: 140px;
+    border-radius: 50%;
+    @include material;
 }
 .header-text-container{
 	position: relative;
@@ -42,6 +42,12 @@
 	background: linear-gradient(to bottom,  rgba(255,255,255,0) 25%,rgba(255,255,255,1) 100%); // W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ 
 }
 .night{
+	.author_img, .home-menu li.active h2, .home-menu li:hover h2{
+		@include material_night;
+	}
+	.site-title{
+		text-shadow: -3px 3px #333;
+	}
 	.site-header{
 		color: white;
 		background-image: url(/images/night.jpg);
