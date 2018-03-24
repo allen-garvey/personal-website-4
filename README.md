@@ -12,6 +12,7 @@ The personal website of Allen Garvey
 
 ## Getting Started
 
-* Run `npm install` to install dependencies
-* Run `make`
-* Open `docs/index.html` in your browser of choice
+* Type `npm install` to install dependencies
+* Type `make`
+* Type `npm start` to start a local webserver
+* Go to [localhost:3000](http://localhost:3000) to view the site
