@@ -53,12 +53,6 @@ function aQuery(selector){
 		});
 		return this;
 	};
-	aQueryObject.prototype.toggleClass = function(className){
-		this.each(function(i, element){
-			element.classList.toggle(className);
-		});
-		return this;
-	};
 	aQueryObject.prototype.hide = function(){
 		this.each(function(i, element){
 			element.style.display = 'none';
