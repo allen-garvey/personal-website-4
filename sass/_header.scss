@@ -14,20 +14,22 @@
     border-radius: 50%;
     @include material;
 }
-.header-text-container{
-	position: relative;
+.site-title{
+	margin-bottom: 0;
+	color: red;
+	mix-blend-mode: overlay;
+	text-shadow: 0px -1px 4px black; //similar to material shadow, but slightly reduced to recede into background
 }
-.header-text{
+.tagline{
+	margin-bottom: 1.5em;
+	//so not hidden behind overlay
 	position: relative;
 	z-index: 100;
-	.site-title{
-		margin-bottom: 0;
-	}
-	.tagline{
-		margin-bottom: 1.5em;
-	}
 }
-.header-text-overlay{
+.nav-overlay-container{
+	position: relative;
+}
+.nav-overlay{
 	position: absolute;
 	z-index: 1;
 	top: 0;
@@ -37,10 +39,12 @@
 	height: 100%;
 	width: 100%;
 	// // Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0+0,1+100 
-	background: linear-gradient(to bottom,  rgba(255,255,255,0) 25%,rgba(255,255,255,1) 100%); // W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ 
+	background: linear-gradient(to bottom,  rgba(255,255,255,0) 5%,rgba(255,255,255,1) 100%); // W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ 
 }
 
-.home-menu{
+.nav{
+	position: relative;
+	z-index: 100;
 	a{
 		color: inherit;
 		&:hover{

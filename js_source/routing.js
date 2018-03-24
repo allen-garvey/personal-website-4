@@ -2,10 +2,10 @@
  * Hide and show sections based on menu title clicked
  */
 (function($){
-	var menu_headings = $('.home-menu li');
+	var menu_headings = $('.nav li');
 	var home_sections = $('.home-section');
     var homepage_text = $('#homepage-text');
-    $('.home-menu li').on('click', function(event) {
+    menu_headings.on('click', function(event) {
         homepage_text.hide();
     	menu_headings.removeClass('active');
     	var clicked = $(this);
@@ -19,7 +19,7 @@
     function router(){
         var url = window.location.href;
         var section_url = url.replace(/^.+#/, '');
-        var section_header = $('.home-menu li[data-section="' + section_url +'"]');
+        var section_header = $('.nav li[data-section="' + section_url +'"]');
         if(url.match(/[#]/) && section_url && section_header.length > 0){
         	section_header.click();
         }
