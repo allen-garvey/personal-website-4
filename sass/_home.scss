@@ -1,5 +1,19 @@
+//wrapper for about section text
 #homepage-text{
 	.home-text-title{
 		font-weight: normal;
+	}
+}
+
+.home-section{ 
+	padding-top: 1em;
+	.js &{
+		display: none;
+	}
+	.section-heading{
+		margin-bottom: 0.1em;
+		.js &{
+			display: none;
+		}
 	}
 }
