@@ -35,8 +35,4 @@ watch_sass:
         inotifywait --quiet --recursive --event create --event modify --event move ./sass/; \
     done
 
-watch_js:
-	while true; do \
-        make $(JS_OUTPUT); \
-        inotifywait --quiet --recursive --event create --event modify --event move ./js_source/; \
-    done
+#to watch js, run `npm run gulp:watch`
