@@ -1,11 +1,12 @@
 "use strict";
 
-var gulp = require('gulp');
-var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
-var rename = require('gulp-rename');
+let path = require('path');
+let gulp = require('gulp');
+let concat = require('gulp-concat');
+let uglify = require('gulp-uglify');
+let rename = require('gulp-rename');
 
-var config = require(__dirname + '/gulp-config.js');
+let config = require(path.join(__dirname, 'gulp-config.js'));
 
 /*
 * JavaScript Wrappers
@@ -13,14 +14,14 @@ var config = require(__dirname + '/gulp-config.js');
 
 function concatScriptsWrapper(files, dist_name){
 	return gulp.src(files)
-		.pipe(concat(dist_name + '.js'))
+		.pipe(concat(`${dist_name}.js`))
 		.pipe(gulp.dest(config.js.DEST_DIR));
 }
 
 function minifyScriptsWrapper(dist_name){
-	return gulp.src(config.js.DEST_DIR + dist_name + '.js')
+	return gulp.src(path.join(config.js.DEST_DIR, `${dist_name}.js`))
 		.pipe(uglify())
-		.pipe(rename(dist_name + '.min.js'))
+		.pipe(rename(`${dist_name}.min.js`))
 		.pipe(gulp.dest(config.js.DEST_DIR));
 }
 
@@ -50,10 +51,8 @@ gulp.task('minifyScripts:head', ['concatScripts:head'], function(){
 /*
 * Watch tasks
 */
-
-
 gulp.task('watchScripts', function(){
-	gulp.watch(config.js.SOURCE_DIR + '**/*.js', ['minifyScripts:footer', 'minifyScripts:head']);
+	gulp.watch(config.js.SOURCE_DIR + '/**/*.js', ['minifyScripts:footer', 'minifyScripts:head']);
 });
 
 
