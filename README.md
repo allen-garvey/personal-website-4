@@ -4,11 +4,10 @@ The personal website of Allen Garvey
 
 ## Dependencies
 
-* PHP 7.0 or later with `cli` module
+* PHP >= 7.0 with `cli` module
+* node >= 6.11
 * npm
-* node 6.11 or later
-* Make
-* sassc 3.3.2 or later with libsass: 3.3.6 or later and sass2scss: 1.0.6 or later
+* make
 
 ## Getting Started
 

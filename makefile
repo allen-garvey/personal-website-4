@@ -19,7 +19,7 @@ $(PAGE_404): $(PAGE_INDEX)
 	cp $(PAGE_INDEX) $(PAGE_404)
 
 $(CSS_OUTPUT): $(SASS_SRC)
-	sassc --style compressed sass/main.scss $(CSS_OUTPUT)
+	npm run gulp
 
 $(JS_OUTPUT): $(JS_SRC)
 	npm run gulp
@@ -31,10 +31,4 @@ watch_php:
         inotifywait --quiet --recursive --event create --event modify --event move ./php/; \
     done
 
-watch_sass:
-	while true; do \
-        make $(CSS_OUTPUT); \
-        inotifywait --quiet --recursive --event create --event modify --event move ./sass/; \
-    done
-
-#to watch js, run `npm run gulp:watch`
+#to watch js and sass, run `npm run gulp:watch`

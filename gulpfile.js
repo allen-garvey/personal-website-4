@@ -4,6 +4,7 @@ let path = require('path');
 let gulp = require('gulp');
 let concat = require('gulp-concat');
 let uglify = require('gulp-uglify');
+let sass = require('gulp-sass');
 
 let config = require(path.join(__dirname, 'gulp-config.js'));
 
@@ -32,18 +33,31 @@ gulp.task('minifyScripts:head', function(){
 });
 
 /*
+* Sass/Styles Tasks
+*/
+gulp.task('sass', function() {
+    gulp.src(config.styles.SOURCE_DIR + '**/*.scss')
+        .pipe(sass(config.styles.sass_options).on('error', sass.logError))
+        .pipe(gulp.dest(config.styles.DEST_DIR));
+});
+
+/*
 * Watch tasks
 */
 gulp.task('watchScripts', function(){
 	gulp.watch(config.js.SOURCE_DIR + '/**/*.js', ['minifyScripts:footer', 'minifyScripts:head']);
 });
 
+gulp.task('watchSass', ['sass'], function() {
+    gulp.watch(config.styles.SOURCE_DIR + '**/*.scss', ['sass']);
+});
+
 
 /*
 * Main gulp tasks
 */
-gulp.task('watch', ['build', 'watchScripts']);
-gulp.task('build', ['minifyScripts:footer', 'minifyScripts:head']);
+gulp.task('watch', ['build', 'watchScripts', 'watchSass']);
+gulp.task('build', ['minifyScripts:footer', 'minifyScripts:head', 'sass']);
 gulp.task('default', ['build']);
 
 
