@@ -26,6 +26,24 @@
 	position: relative;
 	z-index: 100;
 }
+
+@media (max-width: 1199px){
+	.site-header{
+		padding-top: 2em;
+	}
+	.author_img{
+		width: 94px;
+	}
+}
+
+@media (max-width: 850px){
+	.site-title{
+		mix-blend-mode: multiply;
+		color: blue;
+	}
+}
+
+
 .nav-overlay-container{
 	position: relative;
 }
