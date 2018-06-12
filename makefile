@@ -1,7 +1,6 @@
 SASS_SRC != find ./sass -type f -name '*.scss'
 JS_SRC != find ./js_source -type f -name '*.js'
 PHP_SRC != find php -type f -name '*.php'
-SVG_SRC != find php/inc/svg -type f -name '*.svg'
 
 PAGE_INDEX=docs/index.html
 PAGE_404=docs/404.html
@@ -12,7 +11,7 @@ JS_OUTPUT=php/inc/js/app.min.js
 
 all: $(CSS_OUTPUT) $(PAGE_404) $(PAGE_INDEX) $(JS_OUTPUT)
 
-$(PAGE_INDEX): $(JS_OUTPUT) $(PHP_SRC) $(SVG_SRC)
+$(PAGE_INDEX): $(JS_OUTPUT) $(PHP_SRC)
 	php php/index.php > $(PAGE_INDEX)
 
 $(PAGE_404): $(PAGE_INDEX)
