@@ -4,10 +4,12 @@
 .site-header {
     padding-top: 4em;
     text-align: center;
-    background-size: cover;
-    background-repeat: no-repeat;
     background-position: center;
-    background-image: url(/images/splash.png);
+	background-image: url(/images/wave-pattern.png);
+	image-rendering: -webkit-crisp-edges; // Safari 7+
+	image-rendering: -moz-crisp-edges; // Firefox 3.6+
+	image-rendering: -o-crisp-edges; // Opera 12
+	image-rendering: pixelated; // Chrome 41+ and Opera 26+
 }
 .author_img{
     width: 110px;
@@ -16,15 +18,34 @@
 }
 .site-title{
 	margin: -8px 0 0;
-	color: red;
+	color: white;
 	mix-blend-mode: overlay;
-	text-shadow: 0px -1px 4px black; //similar to material shadow, but slightly reduced to recede into background
+	text-shadow: 0px -1px 10px #333; //similar to material shadow, but slightly reduced to recede into background
 }
 .tagline{
-	margin: -8px 0 1.5em;
-	//so not hidden behind overlay
+	display: inline-block;
+	position: relative;
+	top: -3px;
+	z-index: 100;
+	padding: 0 6px;
+	margin-bottom: 1.5em;
+	box-shadow: $material-shadow-light;
+}
+.tagline-overlay{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	z-index: 1;
+	background-color: white;
+	mix-blend-mode: overlay;
+	opacity: 0.45;
+}
+.tagline-text{
 	position: relative;
 	z-index: 100;
+	margin-bottom: 0;
 }
 
 @media (max-width: 1199px){
@@ -36,13 +57,6 @@
 	}
 	.site-title{
 		margin-top: -10px;
-	}
-}
-
-@media (max-width: 850px){
-	.site-title{
-		mix-blend-mode: multiply;
-		color: blue;
 	}
 }
 
@@ -60,7 +74,7 @@
 	height: 100%;
 	width: 100%;
 	// // Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0+0,1+100 
-	background: linear-gradient(to bottom,  rgba(255,255,255,0) 5%,rgba(255,255,255,1) 100%); // W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ 
+	background: linear-gradient(to bottom,  rgba(255,255,255,0) 25%,rgba(255,255,255,1) 100%); // W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ 
 }
 
 .nav{
@@ -91,5 +105,11 @@
 	}
 	li.active h2{
 		font-weight: 600;
+	}
+}
+
+@media (max-width: 500px){
+	.nav{
+		font-size: 0.8em;
 	}
 }

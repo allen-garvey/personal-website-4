@@ -4,7 +4,10 @@
     </a>
     <h1 class="site-title">Allen Garvey</h1>
     <div class="nav-overlay-container">
-        <p class="tagline">Software developer, artist, and musician</p>
+        <div class="tagline">
+            <div class="tagline-overlay"></div>
+            <p class="tagline-text">Software developer, artist and musician</p>
+        </div>
         <div class="nav-overlay"></div>
         <nav class="nav show-js">
             <ul>
