@@ -1,27 +1,5 @@
-/**
- * Icons
- */
-.icon {
-    display: inline-block;
-    > svg {
-        display: inline-block;
-        width: 24px;
-        height: 24px;
-        vertical-align: middle;
-
-        path {
-            fill: $grey-color;
-        }
-    }
-}
-
-.contact-list{
-	li{
-		margin-bottom: 1em;
-		a:hover svg path{
-			fill: darken($grey-color, 50%);
-		}
-	}
+.contact-list li{
+    margin-bottom: 0.5em;
 }
 .contact-label{
     display: inline-block;
