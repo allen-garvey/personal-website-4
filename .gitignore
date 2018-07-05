@@ -17,3 +17,5 @@ Thumbs.db
 *.zip
 .directory
 php/inc/js/*
+public_html/*.html
+public_html/*.css

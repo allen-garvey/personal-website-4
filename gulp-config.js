@@ -24,7 +24,7 @@ config.js.head_files = config.js.head_files.map((file)=>{return path.join(config
 */
 config.styles = {};
 config.styles.SOURCE_DIR = path.join(__dirname, 'sass/');
-config.styles.DEST_DIR = path.join(__dirname, 'docs/');
+config.styles.DEST_DIR = path.join(__dirname, 'public_html/');
 config.styles.sass_options = {
   errLogToConsole: true,
   // sourceComments: true, //turns on line number comments 
