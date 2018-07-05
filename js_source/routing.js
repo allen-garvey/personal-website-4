@@ -5,7 +5,7 @@
 	var menu_headings = $('.nav li');
 	var home_sections = $('.home-section');
     var homepage_text = $('#homepage-text');
-    menu_headings.on('click', function(event) {
+    menu_headings.on('click', function(event){
         homepage_text.hide();
     	menu_headings.removeClass('active');
     	var clicked = $(this);
@@ -25,7 +25,7 @@
         }
         else{
             //404 - show about section
-            $('.home-menu li[data-section="about"]').click();
+            $('.nav li[data-section="about"]').click();
         }
     }
     router();
