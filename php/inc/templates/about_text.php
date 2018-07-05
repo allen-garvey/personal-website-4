@@ -1,2 +1,4 @@
 <h2 class="home-text-title">Hi, I&#8217;m Allen.</h2>
-<p>Some of my most satisfying moments have come while creatively solving problems, either as a musician, artist or software developer. I love learning new things, as shown by my <a href="https://allen-garvey.github.io/github-repo-stats/">diverse experience with different programming languages,</a> and by my interests in both the front end user-facing side of software development as well as the back end business side.</p>
+<p>
+	I&#8217;m a full-stack engineer that specializes in front-end development. After earning a degree in music composition and working for several years as a professional musician on cruise ships, I realized a musician&#8217;s lifestyle was not for me, and so decided to reinvent myself by going back to school to study computer science. With my background in both the arts and sciences and a commitment to getting things done, I believe I make a valuable addition to any team.
+</p>
