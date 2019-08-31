@@ -6,13 +6,13 @@ OUTPUT_DIR=public_html
 
 PAGE_INDEX=$(OUTPUT_DIR)/index.html
 
-CSS_OUTPUT=$(OUTPUT_DIR)/main.css
+CSS_OUTPUT=php/inc/js//main.css
 JS_OUTPUT=php/inc/js/app.min.js
 
 
-all: $(CSS_OUTPUT) $(PAGE_INDEX) $(JS_OUTPUT)
+all: $(PAGE_INDEX)
 
-$(PAGE_INDEX): $(JS_OUTPUT) $(PHP_SRC)
+$(PAGE_INDEX): $(JS_OUTPUT) $(PHP_SRC) $(CSS_OUTPUT)
 	php php/index.php > $(PAGE_INDEX)
 
 $(CSS_OUTPUT): $(SASS_SRC)

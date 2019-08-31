@@ -8,6 +8,7 @@ define('INC_PATH', ROOT_PATH.'inc/');
 define('TEMPLATES_PATH', INC_PATH.'templates/');
 define('MODELS_PATH', INC_PATH.'models/');
 define('JS_PATH', INC_PATH.'js/');
+define('CSS_PATH', INC_PATH.'css/');
 
 //urls
 define('BASE_URL', '/');
