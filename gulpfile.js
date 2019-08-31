@@ -27,11 +27,6 @@ gulp.task('minifyScripts:footer', function(){
 });
 
 
-//Head JS
-gulp.task('minifyScripts:head', function(){
-	return minifyScriptsWrapper(config.js.head_files, config.js.HEAD_DIST_NAME);
-});
-
 /*
 * Sass/Styles Tasks
 */
@@ -45,7 +40,7 @@ gulp.task('sass', function() {
 * Watch tasks
 */
 gulp.task('watchScripts', function(){
-	gulp.watch(config.js.SOURCE_DIR + '/**/*.js', ['minifyScripts:footer', 'minifyScripts:head']);
+	gulp.watch(config.js.SOURCE_DIR + '/**/*.js', ['minifyScripts:footer']);
 });
 
 gulp.task('watchSass', ['sass'], function() {
@@ -57,7 +52,7 @@ gulp.task('watchSass', ['sass'], function() {
 * Main gulp tasks
 */
 gulp.task('watch', ['build', 'watchScripts', 'watchSass']);
-gulp.task('build', ['minifyScripts:footer', 'minifyScripts:head', 'sass']);
+gulp.task('build', ['minifyScripts:footer', 'sass']);
 gulp.task('default', ['build']);
 
 

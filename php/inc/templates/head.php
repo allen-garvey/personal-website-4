@@ -6,5 +6,5 @@
 		<title>Allen Garvey | Full-stack Developer</title>
 		<meta name="description" content="Personal website for Allen Garvey, full-stack software developer">
 		<link rel="stylesheet" href="<?= STYLES_URL.'main.css'; ?>">
-		<script><?php require(JS_PATH.'head.min.js'); ?></script>
+		<script>document.documentElement.className = 'js';</script>
 	</head>
