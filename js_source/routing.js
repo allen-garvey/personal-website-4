@@ -15,7 +15,7 @@
 
     function displaySection(sectionNameToDisplay){
         forEach(navLinks, function(link){
-            var linkSectionName = link.attributes['data-section'].value;
+            var linkSectionName = link.dataset.section;
             if(linkSectionName === sectionNameToDisplay){
                 link.classList.add('active');
             }
@@ -24,7 +24,7 @@
             }
         });
         forEach(contentSections, function(contentSection){
-            var contentSectionName = contentSection.attributes['data-section'].value;
+            var contentSectionName = contentSection.dataset.section;
             if(contentSectionName === sectionNameToDisplay){
                 contentSection.style.display = 'block';
             }
