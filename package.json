@@ -4,7 +4,7 @@
   "description": "Personal website of Allen Garvey",
   "main": "gulpfile.js",
   "scripts": {
-    "start": "http-server public_html -c-1 -p 3000",
+    "start": "php -S localhost:3000 -t public_html/",
     "test": "echo \"Error: no test specified\" && exit 1",
     "gulp": "gulp",
     "gulp:watch": "gulp watch"
@@ -23,7 +23,6 @@
     "gulp": "^3.9.0",
     "gulp-concat": "^2.6.0",
     "gulp-sass": "^4.0.1",
-    "gulp-uglify": "^1.2.0",
-    "http-server": "^0.11.1"
+    "gulp-uglify": "^1.2.0"
   }
 }
