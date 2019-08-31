@@ -12,7 +12,6 @@
 
     var navLinks = document.querySelectorAll('.nav li');
     var contentSections = document.querySelectorAll('main.home section');
-    var sectionNames = ['about', 'contact', 'projects'];
 
     function displaySection(sectionNameToDisplay){
         forEach(navLinks, function(link){
@@ -37,9 +36,13 @@
 
     //routing
     function router(){
-        var url = window.location.href;
-        var sectionUrl = url.replace(/^.+#/, '');
-        var sectionName = sectionNames.indexOf(sectionUrl) >= 0 ? sectionUrl : 'about';
+        var sections = {
+            about: true,
+            contact: true,
+            projects: true
+        };
+        var sectionParam = window.location.hash.substr(1);
+        var sectionName = sections[sectionParam] ? sectionParam : 'about';
         displaySection(sectionName);
 
     }
