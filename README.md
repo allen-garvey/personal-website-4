@@ -5,7 +5,7 @@ The personal website of Allen Garvey
 ## Dependencies
 
 * PHP >= 7.0 with `cli` module
-* node >= 6.11
+* node >= 8
 * npm
 * make
 
