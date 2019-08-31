@@ -16,7 +16,7 @@ $(PAGE_INDEX): $(JS_OUTPUT) $(PHP_SRC)
 	php php/index.php > $(PAGE_INDEX)
 
 $(CSS_OUTPUT): $(SASS_SRC)
-	npm run gulp
+	npm run build
 
 $(JS_OUTPUT): $(JS_SRC)
-	npm run gulp
+	npm run build

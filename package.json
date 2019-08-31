@@ -6,8 +6,8 @@
   "scripts": {
     "start": "php -S localhost:3000 -t public_html/",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "gulp": "gulp",
-    "gulp:watch": "gulp watch"
+    "build": "gulp",
+    "watch": "gulp watch"
   },
   "repository": {
     "type": "git",
