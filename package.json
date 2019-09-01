@@ -6,8 +6,9 @@
   "scripts": {
     "start": "php -S localhost:3000 -t public_html/",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "gulp",
-    "watch": "gulp watch"
+    "build": "webpack --config webpack/webpack.config.js",
+    "deploy": "webpack --config webpack/webpack.config.js --mode='production'",
+    "watch": "webpack --config webpack/webpack.watch.config.js"
   },
   "repository": {
     "type": "git",
@@ -20,9 +21,12 @@
   },
   "homepage": "https://github.com/allen-garvey/personal-website-4#readme",
   "devDependencies": {
-    "gulp": "^3.9.0",
-    "gulp-concat": "^2.6.0",
-    "gulp-sass": "^4.0.1",
-    "gulp-uglify": "^1.2.0"
+    "css-loader": "^3.2.0",
+    "file-loader": "^4.2.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^8.0.0",
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.7"
   }
 }
