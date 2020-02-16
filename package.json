@@ -6,9 +6,9 @@
   "scripts": {
     "start": "php -S localhost:3000 -t public_html/",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --config webpack/webpack.config.js",
-    "deploy": "webpack --config webpack/webpack.config.js --mode='production'",
-    "watch": "webpack --config webpack/webpack.watch.config.js"
+    "build": "webpack --config webpack.config.js",
+    "deploy": "webpack --config webpack.config.js --mode='production'",
+    "watch": "webpack --config webpack.config.js --watch"
   },
   "repository": {
     "type": "git",
