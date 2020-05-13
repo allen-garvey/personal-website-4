@@ -1,7 +1,7 @@
  <li>
     <div class="project-logo">
         <a href="<?= $imageLinkUrl ?>">
-            <img src="<?= ICONS_URL.$project['logo_url'] ?>" alt="<?= $project['title'] ?> logo">
+            <img data-src="<?= ICONS_URL.$project['logo_url'] ?>" alt="<?= $project['title'] ?> logo">
         </a>
     </div>
     <div class="project-content">
