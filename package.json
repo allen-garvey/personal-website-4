@@ -4,11 +4,10 @@
   "description": "Personal website of Allen Garvey",
   "main": "gulpfile.js",
   "scripts": {
-    "start": "php -S localhost:3000 -t public_html/",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/index.js",
+    "test": "mocha",
     "build": "webpack --config webpack/webpack.config.js",
-    "deploy": "webpack --config webpack/webpack.config.js --mode='production'",
-    "watch": "webpack --config webpack/webpack.watch.config.js"
+    "deploy": "webpack --config webpack/webpack.production.config.js --mode='production'"
   },
   "repository": {
     "type": "git",
@@ -22,11 +21,16 @@
   "homepage": "https://github.com/allen-garvey/personal-website-4#readme",
   "devDependencies": {
     "css-loader": "^3.6.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.4",
+    "memfs": "^3.2.0",
     "mini-css-extract-plugin": "^0.9.0",
+    "mocha": "^8.0.1",
     "node-sass": "^4.14.1",
+    "nodemon": "^2.0.4",
     "sass-loader": "^8.0.2",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12",
-    "webpack-livereload-plugin": "^2.3.0"
+    "ws": "^7.3.0"
   }
 }

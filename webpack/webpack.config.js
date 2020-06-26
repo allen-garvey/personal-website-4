@@ -5,7 +5,7 @@ module.exports = {
     mode: 'development',
     entry: `${__dirname}/../assets/js/index.js`,
     output: {
-        path: path.join(__dirname, '..', 'php', 'inc', 'js'),
+        path: path.join(__dirname, '..', '_build'),
         filename: 'app.js',
     },
     module: {
@@ -28,7 +28,7 @@ module.exports = {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: '../css/app.css',
+            filename: '../public_html/assets/main.css',
         }),
     ],
 };
