@@ -1,10 +1,12 @@
 const realFs = require('fs');
 const path = require('path');
 const webpackConstants = require('../../webpack/constants');
+const sections = require('../models/sections');
 
 function addRoutes(app, fs, websocketPort){
     app.get('/', async (req, res) => {
         return res.render('home', {
+            sections,
             websocketPort,
         });
     });
