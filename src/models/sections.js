@@ -1,6 +1,8 @@
 const about = require('./about');
+const contact = require('./contact');
 
 module.exports = {
-    list: ['about'],
+    list: ['about', 'contact'],
     about,
+    contact,
 };

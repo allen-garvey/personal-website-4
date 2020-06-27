@@ -1,0 +1,17 @@
+<ul class="contact-list">
+    {{#each content.contactList}}
+        <li>
+            <span class="contact-label">{{ this.title }}</span>
+            {{#if this.link}}
+                <a href="{{ this.link.url }}">
+                    <span>{{ this.link.text }}</span>
+                </a>
+            {{else}}
+                <a href="" id="email_link" class="show-js">
+                    <span id="email_text"></span>
+                </a>
+                <noscript>firstname dot lastname at gmail</noscript>
+            {{/if}}
+        </li>
+    {{/each}}
+</ul>
