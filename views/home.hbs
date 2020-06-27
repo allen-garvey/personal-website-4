@@ -2,9 +2,7 @@
     {{#each sections.list}}
         {{#with (lookup @root.sections this)}}
             <section data-section="{{ slug }}">
-                {{#if heading}}
-                    <h2 class="section-heading">{{ heading }}</h2>
-                {{/if}}
+                <h2 class="section-heading">{{ heading }}</h2>
                 {{> (lookup . 'slug') content=content}}
             </section>
         {{/with}}
