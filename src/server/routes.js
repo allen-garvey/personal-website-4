@@ -19,7 +19,7 @@ function addRoutes(app, fs, websocketPort){
         });
     });
 
-    app.get('/assets/images/:imageName', async (req, res) => {
+    app.get('/images/:imageName', async (req, res) => {
         const mimeTypes = {
             '.jpg': 'image/jpeg',
             '.jpeg': 'image/jpeg',

@@ -9,7 +9,7 @@ function createServer(){
         extname: '.hbs',
         helpers: {
             imageUrl(imageName){
-                return `/assets/images/${imageName}`;
+                return `/images/${imageName}`;
             }
         }
     }));
