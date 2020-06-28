@@ -1,5 +1,5 @@
-const realFs = require('fs');
 const path = require('path');
+const serveImage = require('./serve-image');
 const webpackConstants = require('../../webpack/constants');
 const sections = require('../models/sections');
 
@@ -19,20 +19,12 @@ function addRoutes(app, fs, websocketPort){
         });
     });
 
-    app.get('/images/:imageName', async (req, res) => {
-        const mimeTypes = {
-            '.jpg': 'image/jpeg',
-            '.jpeg': 'image/jpeg',
-            '.png': 'image/png',
-            '.svg': 'image/svg+xml',
-        };
-        const imageName = req.params.imageName;
+    app.get('/images/icons/:imageName', (req, res) => {
+        serveImage(req, res, path.resolve(webpackConstants.imagesPath, 'icons'));
+    });
 
-        realFs.readFile(path.resolve(webpackConstants.imagesPath, imageName), (err, data) => {
-            if (err) throw err;
-            res.setHeader('Content-Type', mimeTypes[path.extname(imageName)]);
-            res.send(data);
-        });
+    app.get('/images/:imageName', (req, res) => {
+        serveImage(req, res, webpackConstants.imagesPath);
     });
 }
 

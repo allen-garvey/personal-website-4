@@ -10,6 +10,9 @@ function createServer(){
         helpers: {
             imageUrl(imageName){
                 return `/images/${imageName}`;
+            },
+            iconUrl(imageName){
+                return `/images/icons/${imageName}`;
             }
         }
     }));
