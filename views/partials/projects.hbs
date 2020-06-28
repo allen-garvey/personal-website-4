@@ -1,0 +1,27 @@
+<ul class="projects-list">
+    {{#each content.projects}}
+         <li>
+            <div class="project-logo">
+                <a href="{{ this.url }}">
+                    <img data-src="{{ iconUrl this.logo }}" alt="{{ this.title }} logo">
+                </a>
+            </div>
+            <div class="project-content">
+                <h3 class="project-title">
+                    <a href="{{ this.url }}">{{ this.title }}</a>
+                </h3>     
+                <div>
+                    {{{ this.description }}}
+                    <div class="project-links">
+                        <span class="project-source-link">
+                            <a href="{{ this.githubUrl }}">Source</a>
+                        </span>
+                    {{#if this.demoUrl}}
+                        <span class="project-demo-link"><a href="{{ this.demoUrl }}">Demo</a></span>
+                    {{/if}}
+                    </div>
+                </div>
+            </div>
+        </li>
+    {{/each}}
+</ul>
