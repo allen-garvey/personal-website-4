@@ -1,12 +1,12 @@
-const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const webpackConstants = require('./constants');
 
 module.exports = {
     mode: 'development',
     entry: `${__dirname}/../assets/js/index.js`,
     output: {
-        path: path.join(__dirname, '..', '_build'),
-        filename: 'app.js',
+        path: webpackConstants.jsOutputPath,
+        filename: webpackConstants.jsOutputFilename,
     },
     module: {
         rules: [

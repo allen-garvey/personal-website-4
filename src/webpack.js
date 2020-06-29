@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const config = require('../webpack/webpack.config');
+const webpackConstants = require('../webpack/constants');
 
 function createCompiler(fs){
     const compiler = webpack(config);
@@ -9,6 +10,16 @@ function createCompiler(fs){
     return compiler;
 }
 
+async function getJs(fs){
+    return new Promise((resolve, reject) => {
+        fs.readFile(path.resolve(webpackConstants.jsOutputPath, webpackConstants.jsOutputFilename), (err, data) => {
+            if (err) return reject(err);
+            resolve(data);
+        });
+    });
+}
+
 module.exports = {
     createCompiler,
+    getJs,
 };

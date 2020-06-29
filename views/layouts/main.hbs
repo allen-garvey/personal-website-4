@@ -13,7 +13,7 @@
     <div class="page-content">
         {{{ body }}}
     </div>
-    <script>{{ scriptContent }}</script>
+    <script>{{{ scriptContent }}}</script>
     {{#if websocketPort}}
         {{>websocket-js websocketPort=websocketPort }}
     {{/if}}
