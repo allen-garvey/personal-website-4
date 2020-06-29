@@ -1,14 +1,16 @@
 const path = require('path');
 const serveImage = require('./serve-image');
+const webpack = require('../webpack');
 const webpackConstants = require('../../webpack/constants');
 const sections = require('../models/sections');
-const webpack = require('../webpack');
+const header = require('../models/header');
 
 function addRoutes(app, fs, websocketPort){
     app.get('/', async (req, res) => {
         const scriptContent = await webpack.getJs(fs);
 
         return res.render('home', {
+            header,
             sections,
             scriptContent,
             websocketPort,

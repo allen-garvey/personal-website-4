@@ -1,4 +1,5 @@
 module.exports = {
+    title: 'Contact',
     slug: 'contact',
     heading: 'Contact',
     content: {

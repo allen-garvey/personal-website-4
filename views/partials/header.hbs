@@ -12,7 +12,7 @@
         <nav class="nav show-js">
             <ul>
                 {{#each header.sections}}
-                    <li data-section="{{ this.dataUrl }}">
+                    <li data-section="{{ this.slug }}">
                         <a href="{{ this.url }}"><h2>{{ this.title }}</h2></a>
                     </li>    
                 {{/each}}
