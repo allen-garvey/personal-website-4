@@ -23,7 +23,8 @@ async function outputStyles(){
 async function build(){
     await webpack.compile(webpackCompiler);
     console.log('Webpack compile complete');
-    Promise.all([outputStyles()]);
+    await Promise.all([outputStyles()]);
+    console.log(`Build ready for deploy in ${webpackConstants.outputPath}`);
 }
 
 build();
