@@ -1,9 +1,8 @@
 const path = require('path');
 const webpack = require('webpack');
-const config = require('../webpack/webpack.config');
 const webpackConstants = require('../webpack/constants');
 
-function createCompiler(fs){
+function createCompiler(fs, config){
     const compiler = webpack(config);
     compiler.outputFileSystem = fs;
     compiler.outputFileSystem.join = path.join.bind(path)

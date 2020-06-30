@@ -2,7 +2,8 @@ const port = 3000;
 
 const { createFsFromVolume, Volume } = require('memfs');
 const fs = createFsFromVolume(new Volume());
-const webpackCompiler = require('./webpack').createCompiler(fs);
+const webpackConfig = require('../webpack/webpack.config');
+const webpackCompiler = require('./webpack').createCompiler(fs, webpackConfig);
 const server = require('./server/index').createServer(fs, port);
 const websocketConnectionsMap = new Map();
 require('./websockets/websocket').websocketSetup(server, websocketConnectionsMap);
