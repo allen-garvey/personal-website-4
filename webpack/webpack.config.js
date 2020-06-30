@@ -28,7 +28,7 @@ module.exports = {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: '../public_html/assets/main.css',
+            filename: `../public_html/assets/${webpackConstants.stylesOutputFilename}`,
         }),
     ],
 };

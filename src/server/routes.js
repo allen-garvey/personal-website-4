@@ -12,12 +12,13 @@ function addRoutes(app, fs, websocketPort){
         return res.render('home', {
             header,
             sections,
+            stylesFilename: webpackConstants.stylesOutputFilename,
             scriptContent,
             websocketPort,
         });
     });
     
-    app.get('/assets/main.css', (req, res) => {
+    app.get('/main.css', (req, res) => {
         fs.readFile(path.resolve(webpackConstants.assetsPath, 'main.css'), (err, data) => {
             if (err) throw err;
             res.setHeader('Content-Type', 'text/css');
