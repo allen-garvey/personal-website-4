@@ -18,8 +18,8 @@ function addRoutes(app, fs, websocketPort){
         });
     });
     
-    app.get('/main.css', (req, res) => {
-        fs.readFile(path.resolve(webpackConstants.assetsPath, 'main.css'), (err, data) => {
+    app.get(`/${webpackConstants.stylesOutputFilename}`, (req, res) => {
+        fs.readFile(path.resolve(webpackConstants.outputPath, webpackConstants.stylesOutputFilename), (err, data) => {
             if (err) throw err;
             res.setHeader('Content-Type', 'text/css');
             res.send(data);

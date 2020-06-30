@@ -6,8 +6,7 @@
   "scripts": {
     "start": "nodemon src/index.js",
     "test": "mocha",
-    "build": "webpack --config webpack/webpack.config.js",
-    "deploy": "webpack --config webpack/webpack.production.config.js --mode='production'"
+    "deploy": "node src/build.js"
   },
   "repository": {
     "type": "git",

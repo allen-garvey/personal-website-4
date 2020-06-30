@@ -18,7 +18,17 @@ async function getJs(fs){
     });
 }
 
+async function compile(compiler){
+    return new Promise((resolve, reject) => {
+        compiler.run((err, stats) => { 
+            if (err) return reject(err);
+            return resolve(stats);
+        });
+    });
+}
+
 module.exports = {
     createCompiler,
     getJs,
+    compile,
 };
