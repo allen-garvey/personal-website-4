@@ -1,22 +1,10 @@
 const express = require('express');
-const exphbs = require('express-handlebars');
+const handlebars = require('./handlebars');
 
 function createServer(){
     const app = express();
 
-    app.engine('hbs', exphbs({
-        defaultLayout: 'main',
-        extname: '.hbs',
-        helpers: {
-            imageUrl(imageName){
-                return `/images/${imageName}`;
-            },
-            iconUrl(imageName){
-                return `/images/icons/${imageName}`;
-            }
-        }
-    }));
-
+    app.engine('hbs', handlebars.createHandlebarsCompiler());
     app.set('view engine', 'hbs');
 
     return app;
