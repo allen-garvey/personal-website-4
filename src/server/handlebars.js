@@ -1,4 +1,5 @@
 const exphbs = require('express-handlebars');
+const path = require('path');
 
 function createEngine(){
     return exphbs({
@@ -17,6 +18,8 @@ function createEngine(){
 
 function createCompiler(){
     return exphbs.create({
+        layoutsDir: path.resolve(__dirname, '..', '..', 'views', 'layouts'),
+        partialsDir: path.resolve(__dirname, '..', '..', 'views', 'partials'),
         defaultLayout: 'main',
         extname: '.hbs',
         helpers: {
