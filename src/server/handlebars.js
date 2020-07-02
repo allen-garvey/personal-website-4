@@ -1,8 +1,8 @@
 const exphbs = require('express-handlebars');
 const path = require('path');
 
-function createEngine(){
-    return exphbs({
+function getBaseConfig(){
+    return {
         defaultLayout: 'main',
         extname: '.hbs',
         helpers: {
@@ -13,24 +13,20 @@ function createEngine(){
                 return `/images/icons/${imageName}`;
             }
         }
-    });
+    };
+}
+
+function createEngine(){
+    return exphbs(getBaseConfig());
 }
 
 function createCompiler(){
-    return exphbs.create({
+    const config = {
+        ...getBaseConfig(),
         layoutsDir: path.resolve(__dirname, '..', '..', 'views', 'layouts'),
         partialsDir: path.resolve(__dirname, '..', '..', 'views', 'partials'),
-        defaultLayout: 'main',
-        extname: '.hbs',
-        helpers: {
-            imageUrl(imageName){
-                return `/images/${imageName}`;
-            },
-            iconUrl(imageName){
-                return `/images/icons/${imageName}`;
-            }
-        }
-    });
+    };
+    return exphbs.create(config);
 }
 
 module.exports = {
