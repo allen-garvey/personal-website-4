@@ -25,7 +25,8 @@ async function outputStyles(){
 async function outputIndex(){
     const handlebarsCompiler = handlebars.createCompiler();
     const homeContext = await home.getHomeContext(fs);
-    const homeOutput = await handlebarsCompiler.render('views/home.hbs', homeContext);
+    const homeTemplatePath = path.resolve(__dirname, '..', 'views', 'home.hbs');
+    const homeOutput = await handlebarsCompiler.render(homeTemplatePath, homeContext);
     const indexPath = path.resolve(webpackConstants.outputPath, 'index.html');
 
     return new Promise((resolve, reject) => {
