@@ -26,11 +26,14 @@ async function outputIndex(){
     const handlebarsCompiler = handlebars.createCompiler();
     const homeContext = await home.getHomeContext(fs);
     const homeTemplatePath = path.resolve(__dirname, '..', 'views', 'home.hbs');
-    const homeOutput = await handlebarsCompiler.render(homeTemplatePath, homeContext);
+    const layoutTemplatePath = path.resolve(__dirname, '..', 'views', 'layouts', 'main.hbs');
+    const body = await handlebarsCompiler.render(homeTemplatePath, homeContext);
+    const layoutContext = Object.assign({}, homeContext, {body});
+    const homeHtml = await handlebarsCompiler.render(layoutTemplatePath, layoutContext);
     const indexPath = path.resolve(webpackConstants.outputPath, 'index.html');
 
     return new Promise((resolve, reject) => {
-        realFs.writeFile(indexPath, homeOutput, (err) => {
+        realFs.writeFile(indexPath, homeHtml, (err) => {
             if (err) return reject(err);
             return resolve();
         });
