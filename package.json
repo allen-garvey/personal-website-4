@@ -21,13 +21,13 @@
   "devDependencies": {
     "css-loader": "^3.6.0",
     "express": "^4.17.1",
-    "express-handlebars": "^4.0.4",
+    "express-handlebars": "^4.0.5",
     "memfs": "^3.2.0",
     "mini-css-extract-plugin": "^0.9.0",
     "mocha": "^8.0.1",
     "node-sass": "^4.14.1",
     "nodemon": "^2.0.4",
-    "sass-loader": "^8.0.2",
+    "sass-loader": "^9.0.1",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12",
     "ws": "^7.3.0"
