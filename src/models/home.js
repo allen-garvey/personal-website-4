@@ -14,7 +14,7 @@ async function getHomeContext(fs, websocketPort=null){
     };
 
     if(websocketPort){
-        contex.websocketPort = websocketPort;
+        context.websocketPort = websocketPort;
     }
 
     return context;
