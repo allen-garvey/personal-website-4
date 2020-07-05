@@ -1,7 +1,7 @@
 <main class="home wrapper">
     {{#each sections.list}}
         {{#with (lookup @root.sections this)}}
-            <section data-section="{{ slug }}">
+            <section id="{{ slug }}">
                 <h2 class="section-heading">{{ heading }}</h2>
                 {{> (lookup . 'slug') content=content}}
             </section>

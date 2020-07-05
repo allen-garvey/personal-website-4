@@ -4,7 +4,6 @@ const projects = require('./sections/projects');
 
 module.exports = {
     list: ['about', 'projects', 'contact'],
-    navList: ['contact', 'about', 'projects'],
     about,
     contact,
     projects,
