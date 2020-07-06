@@ -7,12 +7,20 @@
 	}
 }
 
-.projects-list li{
-	margin-bottom: 2em;
-	display: flex;
+.projects-list {
+	margin-left: $project-icon-width * -1;
 
-	&:last-of-type{
-		margin-bottom: 0;
+	@include media-query($on-laptop) {
+        margin-left: 0;
+    }
+
+	li{
+		margin-bottom: 2em;
+		display: flex;
+
+		&:last-of-type{
+			margin-bottom: 0;
+		}
 	}
 }
 
@@ -25,6 +33,10 @@
 .project-logo{
 	padding: 1em;
 	flex-basis: 100px;
+
+	@include media-query($on-laptop) {
+        flex-basis: 67px;
+    }
 }
 .project-content{
 	flex-basis: 95%;

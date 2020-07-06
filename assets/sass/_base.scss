@@ -97,13 +97,16 @@ a {
  * Wrapper
  */
 .wrapper {
-    max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
+    max-width: 1000px;
     margin-right: auto;
     margin-left: auto;
-    padding: $spacing-unit * 2 $spacing-unit;
+    padding: $spacing-unit * 2 0 $spacing-unit * 2 $project-icon-width;
+
+    @media screen and (max-width: 1500px) {
+        padding: $spacing-unit * 2 $project-icon-width;
+    }
 
     @include media-query($on-laptop) {
-        max-width:         calc(#{$content-width} - (#{$spacing-unit}));
         padding-right: $spacing-unit / 2;
         padding-left: $spacing-unit / 2;
     }
