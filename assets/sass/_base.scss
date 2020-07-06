@@ -28,8 +28,16 @@ body {
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
-h1, h2, h3, p, ul, ol{
+h1, h2, h3, p{
     margin-bottom: $spacing-unit / 2;
+}
+
+section {
+    margin-bottom: $spacing-unit * 4;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
 }
 
 
@@ -89,11 +97,10 @@ a {
  * Wrapper
  */
 .wrapper {
-    max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+    max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
     margin-right: auto;
     margin-left: auto;
-    padding-right: $spacing-unit;
-    padding-left: $spacing-unit;
+    padding: $spacing-unit * 2 $spacing-unit;
 
     @include media-query($on-laptop) {
         max-width:         calc(#{$content-width} - (#{$spacing-unit}));
