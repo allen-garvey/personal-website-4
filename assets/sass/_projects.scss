@@ -15,7 +15,7 @@
     }
 
 	li{
-		margin-bottom: 2em;
+		margin-bottom: $spacing-unit * 1.5;
 		display: flex;
 
 		&:last-of-type{
