@@ -1,13 +1,11 @@
-// from: https://stackoverflow.com/questions/196972/convert-string-to-title-case-with-javascript
-function toTitleCase(str) {
-    return str.replace(
-        /\w\S*/g,
-        function(txt) {
-            return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-        }
-    );
+function smartenQuotes(s){
+    return s
+        .replace(/(\s)'/g, '$1‘')
+        .replace(/'/g, '’')
+        .replace(/(\s)"/g, '$1“')
+        .replace(/"/g, '”');
 }
 
 module.exports = {
-    toTitleCase,
+    smartenQuotes
 };
