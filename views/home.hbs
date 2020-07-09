@@ -2,7 +2,7 @@
     {{#each sections.list}}
         {{#with (lookup @root.sections this)}}
             <section id="{{ slug }}">
-                <h2 class="section-heading">{{ heading }}</h2>
+                <h2 class="section-heading">{{ smartenQuotes heading }}</h2>
                 {{> (lookup . 'slug') content=content}}
             </section>
         {{/with}}

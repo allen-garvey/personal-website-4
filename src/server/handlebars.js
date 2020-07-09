@@ -1,5 +1,6 @@
 const exphbs = require('express-handlebars');
 const path = require('path');
+const stingHelpers = require('../helpers/string-helpers');
 
 function getBaseConfig(){
     return {
@@ -11,7 +12,8 @@ function getBaseConfig(){
             },
             iconUrl(imageName){
                 return `/images/icons/${imageName}`;
-            }
+            },
+            smartenQuotes: stingHelpers.smartenQuotes,
         }
     };
 }

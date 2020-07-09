@@ -8,10 +8,10 @@
             </div>
             <div class="project-content">
                 <h3 class="project-title">
-                    <a href="{{ this.url }}">{{ this.title }}</a>
+                    <a href="{{ this.url }}">{{ smartenQuotes this.title }}</a>
                 </h3>     
                 <div>
-                    {{{ this.description }}}
+                    {{{ smartenQuotes this.description }}}
                     <div class="project-links">
                         <span class="project-source-link">
                             <a href="{{ this.githubUrl }}">GitHub</a>
