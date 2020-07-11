@@ -11,7 +11,7 @@
 	image-rendering: -o-crisp-edges; // Opera 12
 	image-rendering: pixelated; // Chrome 41+ and Opera 26+
 }
-.author_img{
+.author-img{
     width: 110px;
     border-radius: 50%;
     @include material;
@@ -52,7 +52,7 @@
 	.site-header{
 		padding-top: 2em;
 	}
-	.author_img{
+	.author-img{
 		width: 94px;
 	}
 	.site-title{
