@@ -9,31 +9,19 @@ module.exports = {
             },
             {
                 title: 'GitHub',
-                link: {
-                    url: 'https://github.com/allen-garvey',
-                    text: 'allen-garvey',
-                },
+                url: 'https://github.com/allen-garvey',
             },
             {
                 title: 'YouTube',
-                link: {
-                    url: 'https://www.youtube.com/channel/UC8IXyv7je-DS2a5xNlV7wHA',
-                    text: 'strangescenery.com',
-                },
+                url: 'https://www.youtube.com/channel/UC8IXyv7je-DS2a5xNlV7wHA',
             },
             {
                 title: 'SoundCloud',
-                link: {
-                    url: 'https://soundcloud.com/allengarvey',
-                    text: 'soundcloud.com/allengarvey',
-                },
+                url: 'https://soundcloud.com/allengarvey',
             },
             {
                 title: 'Artwork',
-                link: {
-                    url: 'https://strangescenery.com',
-                    text: 'strangescenery.com',
-                },
+                url: 'https://strangescenery.com',
             },
         ],
     },

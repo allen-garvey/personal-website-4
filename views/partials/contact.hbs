@@ -1,15 +1,12 @@
 <ul class="contact-list">
     {{#each content.contactList}}
         <li>
-            <span class="contact-label">{{ this.title }}</span>
-            {{#if this.link}}
-                <a href="{{ this.link.url }}">
-                    <span>{{ this.link.text }}</span>
+            {{#if this.url}}
+                <a href="{{ this.url }}">
+                    {{ this.title }}
                 </a>
             {{else}}
-                <a href="" id="email_link">
-                    <span id="email_text"></span>
-                </a>
+                <a href="" id="email_link"></a>
                 <noscript>firstname dot lastname at gmail</noscript>
             {{/if}}
         </li>

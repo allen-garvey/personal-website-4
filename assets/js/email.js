@@ -10,6 +10,7 @@ export function initEmail(){
     const first = 'allen';
     const fourth = 'gmail';
     const link = first + dot + second + at + fourth + dot + sixth;
-    document.getElementById('email_link').href = 'mailto:' + link;
-    document.getElementById('email_text').innerHTML = link;
+    const emailLink = document.getElementById('email_link');
+    emailLink.href = 'mailto:' + link;
+    emailLink.innerText = 'Email';
 }
