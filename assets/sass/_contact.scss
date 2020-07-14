@@ -1,10 +1,7 @@
 .contact-list li{
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
 }
 .contact-label{
     display: inline-block;
-    min-width: 4.5em;
-    &:after{
-        content: ':';
-    }
+    min-width: 8em;
 }

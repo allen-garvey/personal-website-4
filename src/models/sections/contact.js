@@ -15,6 +15,20 @@ module.exports = {
                 },
             },
             {
+                title: 'YouTube',
+                link: {
+                    url: 'https://www.youtube.com/channel/UC8IXyv7je-DS2a5xNlV7wHA',
+                    text: 'strangescenery.com',
+                },
+            },
+            {
+                title: 'SoundCloud',
+                link: {
+                    url: 'https://soundcloud.com/allengarvey',
+                    text: 'soundcloud.com/allengarvey',
+                },
+            },
+            {
                 title: 'Artwork',
                 link: {
                     url: 'https://strangescenery.com',
