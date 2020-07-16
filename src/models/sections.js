@@ -1,10 +1,10 @@
 const about = require('./sections/about');
-const contact = require('./sections/contact');
+const social = require('./sections/social');
 const projects = require('./sections/projects');
 
 module.exports = {
-    list: ['about', 'projects', 'contact'],
+    list: ['about', 'projects', 'social'],
     about,
-    contact,
+    social,
     projects,
 };

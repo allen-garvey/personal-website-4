@@ -1,9 +1,9 @@
 module.exports = {
-    title: 'Contact',
-    slug: 'contact',
-    heading: 'Contact',
+    title: 'Social',
+    slug: 'social',
+    heading: 'Social',
     content: {
-        contactList: [
+        socialList: [
             {
                 title: 'Email',
             },
