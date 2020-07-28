@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/allen-garvey/personal-website-4#readme",
   "devDependencies": {
-    "css-loader": "^3.6.0",
+    "css-loader": "^4.0.0",
     "express": "^4.17.1",
     "express-handlebars": "^5.1.0",
     "memfs": "^3.2.0",
@@ -28,7 +28,7 @@
     "node-sass": "^4.14.1",
     "nodemon": "^2.0.4",
     "sass-loader": "^9.0.2",
-    "webpack": "^4.43.0",
+    "webpack": "^4.44.0",
     "webpack-cli": "^3.3.12",
     "ws": "^7.3.1"
   }
