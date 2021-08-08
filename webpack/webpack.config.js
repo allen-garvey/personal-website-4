@@ -32,7 +32,7 @@ module.exports = {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: `../public_html/${webpackConstants.stylesOutputFilename}`,
+            filename: `./${webpackConstants.stylesOutputFilename}`,
         }),
     ],
 };
