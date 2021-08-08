@@ -94,14 +94,13 @@ a {
 }
 
 .container {
-    max-width: 1000px;
-    margin-right: auto;
-    margin-left: auto;
-    padding: $spacing-unit * 2 0 $spacing-unit * 2 $project-icon-width;
+    box-sizing: border-box;
+    max-width: 1244px;
+    margin: 0 auto;
+}
 
-    @media screen and (max-width: 1500px) {
-        padding: $spacing-unit * 2 $project-icon-width;
-    }
+.main-content {
+    padding: $spacing-unit * 2 $project-icon-width;
 
     @include media-query($on-laptop) {
         padding-right: $spacing-unit / 2;
@@ -110,7 +109,7 @@ a {
 }
 
 .page-content{
-    margin-bottom: 100px;
+    margin-bottom: 12em;
 }
 
 .section-heading {
