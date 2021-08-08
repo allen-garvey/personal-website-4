@@ -3,14 +3,10 @@
  * (Do it this way instead of directly in html to avoid spambots)
  */
 export function initEmail(){
-    const dot = '.';
-    const at = '@';
-    const sixth = 'com';
-    const second = 'garvey';
+    const last = 'garvey';
     const first = 'allen';
-    const fourth = 'gmail';
-    const link = first + dot + second + at + fourth + dot + sixth;
+    const host = 'gmail';
     const emailLink = document.getElementById('email_link');
-    emailLink.href = 'mailto:' + link;
+    emailLink.href = `mailto:${first}.${last}@${host}.com`;
     emailLink.innerText = 'Email';
 }
