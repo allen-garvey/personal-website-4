@@ -3,6 +3,6 @@ module.exports = {
     slug: 'about',
     heading: `Hi, I'm Allen.`,
     content: {
-        body: `I'm a full-stack engineer that specializes in front-end web development. After earning a degree in music composition and working for several years as a professional musician on cruise ships, I realized a musician's lifestyle was not for me, and so decided to reinvent myself by going back to school to study computer science. With my background in both the arts and sciences and a knack for getting things done, I believe I can make a positive contribution to any team.`
+        body: `I specialize in front-end web development as one of my passions is how people can use computers to fuel their creativity and increase their productivity, and I believe the web is the most democratic and accessible way to do that. However my curiosity has taken me far afield and I've worked at times in full-stack web development, desktop and mobile app, and command-line tools. Some of my other hobbies include playing and writing music, photography, chess, long walks, photography and creating digital and traditional art.`
     },
 };
