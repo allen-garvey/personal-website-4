@@ -7,6 +7,7 @@ function serveImage(req, res, sourceDir){
         '.jpeg': 'image/jpeg',
         '.png': 'image/png',
         '.svg': 'image/svg+xml',
+        '.webp': 'image/webp',
     };
     const imageName = req.params.imageName;
 
