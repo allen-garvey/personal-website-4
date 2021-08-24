@@ -4,7 +4,7 @@
   "description": "Personal website of Allen Garvey",
   "main": "gulpfile.js",
   "scripts": {
-    "start": "nodemon src/index.js",
+    "start": "open-cli http://localhost:3000 && nodemon src/index.js",
     "test": "mocha",
     "deploy": "node src/build.js"
   },
@@ -27,6 +27,7 @@
     "mocha": "^9.1.0",
     "node-sass": "^6.0.1",
     "nodemon": "^2.0.12",
+    "open-cli": "^7.0.0",
     "sass-loader": "^12.1.0",
     "webpack": "^5.51.1",
     "webpack-cli": "^4.8.0",
