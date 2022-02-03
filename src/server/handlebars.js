@@ -19,7 +19,7 @@ function getBaseConfig(){
 }
 
 function createEngine(){
-    return exphbs(getBaseConfig());
+    return exphbs.create(getBaseConfig()).engine;
 }
 
 function createCompiler(){
