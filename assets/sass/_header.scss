@@ -12,6 +12,15 @@
 	image-rendering: -moz-crisp-edges; // Firefox 3.6+
 	image-rendering: -o-crisp-edges; // Opera 12
 	image-rendering: pixelated; // Chrome 41+ and Opera 26+
+	position: relative;
+
+	// based on: https://una.im/vignettes/
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0; left: 0; bottom: 0; right: 0;
+		box-shadow: inset 0px 0px 150px rgba(3,23,3,0.9);
+	  }
 }
 .author-img{
     width: 168px;
