@@ -1,7 +1,6 @@
 const projects = [
     {
         title: 'Dithermark',
-        completionDate: '2018-08-01',
         github: 'dithermark',
         demoUrl: 'https://dithermark.com',
         logo: 'dithermark-icon.svg',
@@ -9,7 +8,6 @@ const projects = [
     },
     {
         title: 'Artour',
-        completionDate: '2017-03-10',
         github: 'artour',
         demoUrl: 'https://strangescenery.com',
         logo: 'artour-icon.svg',
@@ -17,7 +15,6 @@ const projects = [
     },
     {
         title: 'Capricornus Squadron',
-        completionDate: '2017-06-10',
         github: 'capricornus-squadron',
         demoUrl: 'https://allen-garvey.github.io/capricornus-squadron',
         logo: 'capricornus-squadron-icon.svg',
@@ -25,14 +22,12 @@ const projects = [
     },
     {
         title: 'dminjs',
-        completionDate: '2018-01-08',
         github: 'dminjs',
         logo: 'dminjs-icon.svg',
         description: 'JavaScript minifier that strips comments and excess whitespace in the spirit of <a href=\'https://www.crockford.com/javascript/jsmin.html\'>jsmin.</a> Written in D and compiles to a native binary, which allows faster startup speed than <a href=\'https://github.com/mishoo/UglifyJS\'>UglifyJS</a> or <a href=\'https://developers.google.com/closure/compiler/\'>Google Closure Compiler.</a> Uses single-pass parsing with single character lookahead for increased speed and reduced memory usage, and supports ES5, ES2015, ES6 and ES7 versions of JavaScript syntax.'
     },
     {
         title: 'CSV Parser',
-        completionDate: '2016-04-25',
         github: 'csv-parser-js',
         logo: 'csv-parser-icon.svg',
         description: 'CSV parser written in JavaScript that is currently being used in production as part of a corporate LMS (learning management system). Compatible with the CSV output from Excel, Google Sheets, and Apple Numbers and can be used either in the browser or on a server using <a href=\'https://nodejs.org\'>Node.js.</a> Includes unit tests using the <a href=\'https://jasmine.github.io/index.html\'>Jasmine test framework.</a>'
