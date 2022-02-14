@@ -14,6 +14,13 @@ const projects = [
         description: 'A SPA app built with Vue and Vue Router that uses an API from Reason Studios to browse and preview sound packs from their Reason+ subscription service.',
     },
     {
+        title: 'Capricornus Squadron',
+        github: 'capricornus-squadron',
+        demoUrl: 'https://allen-garvey.github.io/capricornus-squadron',
+        logo: 'capricornus-squadron-icon.svg',
+        description: '2D turn-based strategy browser game in the style of Advance Wars. Created the game engine, user interface and music while acting as the lead engineer for two other students. Uses the browser Canvas and Web Audio APIs.'
+    },
+    {
         title: 'Chess Scout',
         github: 'chess-scout-react',
         demoUrl: 'https://chess-scout-react.netlify.app/',
@@ -26,13 +33,6 @@ const projects = [
         demoUrl: 'https://strangescenery.com',
         logo: 'artour-icon.svg',
         description: 'Custom CMS, blog engine and static site generator specifically designed for artwork and photography blogs. Made with <a href="https://elixir-lang.org">Elixir</a> and the <a href="https://www.phoenixframework.org">Phoenix Framework.</a> Features include: separate admin section, custom tags and categories, multiple image asset size support, organizing images in albums using drag-and-drop, and image carousels with optional captions and lazy asset loading.'
-    },
-    {
-        title: 'Capricornus Squadron',
-        github: 'capricornus-squadron',
-        demoUrl: 'https://allen-garvey.github.io/capricornus-squadron',
-        logo: 'capricornus-squadron-icon.svg',
-        description: '2D turn-based strategy browser game in the style of Advance Wars. Created the game engine, user interface and music while acting as the lead engineer for two other students. Uses the browser Canvas and Web Audio APIs.'
     },
     {
         title: 'dminjs',
