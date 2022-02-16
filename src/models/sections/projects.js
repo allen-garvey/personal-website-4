@@ -10,7 +10,7 @@ const projects = [
         title: 'Reason Sound Pack Viewer',
         github: 'reason-sound-pack-viewer',
         demoUrl: 'https://reason-packs.allengarvey.com',
-        logo: 'dithermark-icon.svg',
+        logo: 'reason-packs-icon.svg',
         description: 'A SPA app built with Vue and Vue Router that uses an API from Reason Studios to browse and preview sound packs from their Reason+ subscription service.',
     },
     {
