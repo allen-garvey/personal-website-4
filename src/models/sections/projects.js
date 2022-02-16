@@ -24,7 +24,7 @@ const projects = [
         title: 'Chess Scout',
         github: 'chess-scout-react',
         demoUrl: 'https://chess-scout-react.netlify.app/',
-        logo: 'dithermark-icon.svg',
+        logo: 'chess-scout-icon.svg',
         description: 'A SPA app that uses the Lichess API to visualize a player\'s opening repetoire and move trees. Built with React, it uses a custom PGN parser and chess rendering engine to display chess games using the browser Canvas API.',
     },
     {
