@@ -31,7 +31,7 @@ const projects = [
         title: 'Umbrella CMS',
         github: 'phoenix-umbrella',
         demoUrl: 'https://strangescenery.com',
-        logo: 'artour-icon.svg',
+        logo: 'umbrella-icon.svg',
         description: 'Custom CMS, blog engine and static site generator specifically designed for artwork and photography blogs. Made with <a href="https://elixir-lang.org">Elixir</a> and the <a href="https://www.phoenixframework.org">Phoenix Framework.</a> Features include: separate admin section, custom tags and categories, multiple image asset size support, organizing images in albums using drag-and-drop, and image carousels with optional captions and lazy asset loading.'
     },
     {
