@@ -34,12 +34,12 @@ const projects = [
         logo: 'umbrella-icon.svg',
         description: 'Custom CMS, blog engine and static site generator specifically designed for artwork and photography blogs. Made with <a href="https://elixir-lang.org">Elixir</a> and the <a href="https://www.phoenixframework.org">Phoenix Framework.</a> Features include: separate admin section, custom tags and categories, multiple image asset size support, organizing images in albums using drag-and-drop, and image carousels with optional captions and lazy asset loading.'
     },
-    {
-        title: 'dminjs',
-        github: 'dminjs',
-        logo: 'dminjs-icon.svg',
-        description: 'JavaScript minifier that strips comments and excess whitespace in the spirit of <a href="https://www.crockford.com/jsmin.html">jsmin.</a> Written in D and compiles to a native binary, which allows faster startup speed than <a href="https://github.com/mishoo/UglifyJS">UglifyJS</a> or <a href="https://developers.google.com/closure/compiler">Google Closure Compiler.</a> Uses single-pass parsing with single character lookahead for increased speed and reduced memory usage, and supports ES5, ES2015, ES6 and ES7 versions of JavaScript syntax.'
-    },
+    // {
+    //     title: 'dminjs',
+    //     github: 'dminjs',
+    //     logo: 'dminjs-icon.svg',
+    //     description: 'JavaScript minifier that strips comments and excess whitespace in the spirit of <a href="https://www.crockford.com/jsmin.html">jsmin.</a> Written in D and compiles to a native binary, which allows faster startup speed than <a href="https://github.com/mishoo/UglifyJS">UglifyJS</a> or <a href="https://developers.google.com/closure/compiler">Google Closure Compiler.</a> Uses single-pass parsing with single character lookahead for increased speed and reduced memory usage, and supports ES5, ES2015, ES6 and ES7 versions of JavaScript syntax.'
+    // },
 ].map((project) => {
     project.githubUrl = `https://github.com/allen-garvey/${project.github}`;
     project.url = project.demoUrl || project.githubUrl;
