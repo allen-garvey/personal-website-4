@@ -11,7 +11,7 @@ const projects = [
         github: 'reason-sound-pack-viewer',
         demoUrl: 'https://reason-packs.allengarvey.com',
         logo: 'reason-packs-icon.svg',
-        description: 'A SPA app built with Vue and Vue Router that uses an API from Reason Studios to browse and preview sound packs from their Reason+ subscription service.',
+        description: '<a href="https://www.reasonstudios.com/">Reason+</a> is a subscription service that allows users to download sounds and presets in the form of sound packs for use in Reason. Using the desktop companion app, subscribers can view and download the packs, but for non-subscribers and users that don\'t have the app, they are limited to the <a href="https://share.reasonstudios.com/">Reason+ share site.</a> I reversed engineered the API, and used Vue to create a fully featured single page app so users can quickly and easily preview all the sound packs.',
     },
     {
         title: 'Capricornus Squadron',
