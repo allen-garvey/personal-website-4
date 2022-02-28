@@ -4,7 +4,7 @@ const projects = [
         github: 'dithermark',
         demoUrl: 'https://dithermark.com',
         logo: 'dithermark-icon.svg',
-        description: 'Web application that allows you to easily create original pixel art. Includes variations on many popular image dithering algorithms, as well as original color quantization algorithm research. Uses <a href="https://vuejs.org">Vue.js</a>, the Unsplash photo API for random images and modern JavaScript features such as: Web Workers, Canvas API, and WebGL.'
+        description: 'Web app that allows you to quickly and easily transform photos into original pixel art. It includes variations on many popular image dithering algorithms, as well as original color quantization algorithm research. Built with Vue, it uses the Canvas API, Web Workers, WebGL and the Unsplash photo API for random images.'
     },
     {
         title: 'Reason Sound Pack Viewer',
