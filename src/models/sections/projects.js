@@ -18,7 +18,7 @@ const projects = [
         github: 'capricornus-squadron',
         demoUrl: 'https://allen-garvey.github.io/capricornus-squadron',
         logo: 'capricornus-squadron-icon.svg',
-        description: '2D turn-based strategy browser game in the style of Advance Wars. Created the game engine, user interface and music while acting as the lead engineer for two other students. Uses the browser Canvas and Web Audio APIs.'
+        description: '2D turn-based strategy browser game in the style of Advance Wars. I created the custom game engine, user interface and music while acting as the lead developer for two other students. Uses the browser Canvas and Web Audio APIs.'
     },
     {
         title: 'Chess Scout',
