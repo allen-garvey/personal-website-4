@@ -36,6 +36,10 @@
 
 	@include media-query($on-laptop) {
         flex-basis: 67px;
+	}
+	
+	@include media-query($on-palm) {
+        display: none;
     }
 }
 .project-content{
