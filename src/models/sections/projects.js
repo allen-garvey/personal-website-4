@@ -25,7 +25,7 @@ const projects = [
         github: 'chess-scout-react',
         demoUrl: 'https://chess-scout-react.netlify.app/',
         logo: 'chess-scout-icon.svg',
-        description: 'A SPA app that uses the Lichess API to visualize a player\'s opening repetoire and move trees. Built with React, it uses a custom PGN parser and chess rendering engine to display chess games using the browser Canvas API.',
+        description: 'Opening preparation is a key component of chess success. I built an app that uses the Lichess API to download a player\'s games and visually display their opening repertoire and statistics. This can be used to prepare against tough opponents, or to evaluate your own strengths and weaknesses. Built with React, it uses a custom PGN parser and chess rendering engine to display chess games using the browser Canvas API.',
     },
     {
         title: 'Umbrella CMS',
