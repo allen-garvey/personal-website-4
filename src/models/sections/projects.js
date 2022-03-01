@@ -11,21 +11,21 @@ const projects = [
         github: 'reason-sound-pack-viewer',
         demoUrl: 'https://reason-packs.allengarvey.com',
         logo: 'reason-packs-icon.svg',
-        description: '<a href="https://www.reasonstudios.com/">Reason+</a> is a subscription service that allows users to download sounds and presets in the form of sound packs for use in Reason. Using the desktop companion app, subscribers can view and download the packs, but for non-subscribers and users that don\'t have the app, they are limited to the <a href="https://share.reasonstudios.com/">Reason+ share site.</a> I reversed engineered the API, and used Vue to create a fully featured single page app so users can quickly and easily preview all the sound packs.',
+        description: '<a href="https://www.reasonstudios.com/">Reason+</a> is a subscription service that allows users to download sounds and presets in the form of sound packs for use in Reason. Using the desktop companion app, subscribers can view and download the packs, but non-subscribers and users that don\'t have the app are limited to the <a href="https://share.reasonstudios.com/">Reason+ share site.</a> I reversed engineered the API, and used Vue to create a fully featured single page app so users can quickly and easily preview all the sound packs.',
     },
     {
         title: 'Capricornus Squadron',
         github: 'capricornus-squadron',
         demoUrl: 'https://allen-garvey.github.io/capricornus-squadron',
         logo: 'capricornus-squadron-icon.svg',
-        description: '2D turn-based strategy browser game in the style of Advance Wars. I created the custom game engine, user interface and music while acting as the lead developer for two other students. Uses the browser Canvas and Web Audio APIs. While playable on mobile, for the best experience use a device with a mouse.'
+        description: '2D turn-based strategy browser game in the style of Advance Wars. I created the custom game engine, user interface and music while acting as the lead developer for two other students. Uses the browser Canvas and Web Audio APIs. While playable using touch input, for the best experience a mouse is recommended.'
     },
     {
         title: 'Chess Scout',
         github: 'chess-scout-react',
         demoUrl: 'https://chess-scout-react.netlify.app/',
         logo: 'chess-scout-icon.svg',
-        description: 'Opening preparation is a key component of chess success. I built an app that uses the Lichess API to download a player\'s games and visually display their opening repertoire and statistics. This can be used to prepare against tough opponents, or to evaluate your own strengths and weaknesses. Built with React, it uses a custom PGN parser and chess rendering engine to display chess games using the browser Canvas API.',
+        description: 'Opening preparation is a key component of chess success. I built an app that uses the Lichess API to download a player\'s games and visually display their opening repertoire and statistics. This can be used to prepare against tough opponents or to evaluate your own strengths and weaknesses. Built with React, it uses a custom PGN parser and chess rendering engine to display chess games using the browser Canvas API.',
     },
     {
         title: 'Umbrella CMS',
