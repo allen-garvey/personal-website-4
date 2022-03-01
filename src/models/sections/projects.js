@@ -32,7 +32,7 @@ const projects = [
         github: 'phoenix-umbrella',
         demoUrl: 'https://strangescenery.com',
         logo: 'umbrella-icon.svg',
-        description: 'Over the years I had accumulated many custom CMSs in multiple languages and frameworks, to organize such things as book and movie reviews, inspirational quotes, bookmarks, music, and my artwork and photography. I migrated all these projects to Elixir and the Phoenix Framework, and grouped them together in an umbrella project. This allows the advantages of a monolith, as projects can easily share code and use the same instance of the BEAM virtual machine for increased efficiency, but allows the flexibility of microservices, as each sub-project has its own dependencies and configuration.',
+        description: 'A project created using Elixir and the Phoenix Framework to house the various custom content management systems (CMSs) I have created. These include CMSs for book and movie reviews, bookmarks, music library, artwork and photography. It includes custom mix (scripting) tasks, such as to import and convert images to my photo library, or to generate the static site for my artwork at <a href="https://strangescenery.com">strangescenery.com</a>. It is structured as an umbrella project, which allows the advantages of a monolith, as projects can easily share code and use the same instance of the BEAM virtual machine for increased efficiency, but allows the flexibility of microservices, as each sub-project has its own dependencies and configuration. Also included is a custom shared authentication middleware, which allows each app to share the same login information.',
     },
     // {
     //     title: 'dminjs',
