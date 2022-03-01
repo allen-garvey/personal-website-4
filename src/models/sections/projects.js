@@ -32,7 +32,7 @@ const projects = [
         github: 'phoenix-umbrella',
         demoUrl: 'https://strangescenery.com',
         logo: 'umbrella-icon.svg',
-        description: 'Custom CMS, blog engine and static site generator specifically designed for artwork and photography blogs. Made with <a href="https://elixir-lang.org">Elixir</a> and the <a href="https://www.phoenixframework.org">Phoenix Framework.</a> Features include: separate admin section, custom tags and categories, multiple image asset size support, organizing images in albums using drag-and-drop, and image carousels with optional captions and lazy asset loading.'
+        description: 'Over the years I had accumulated many custom CMSs in multiple languages and frameworks, to organize such things as book and movie reviews, inspirational quotes, bookmarks, music, and my artwork and photography. I migrated all these projects to Elixir and the Phoenix Framework, and grouped them together in an umbrella project. This allows the advantages of a monolith, as projects can easily share code and use the same instance of the BEAM virtual machine for increased efficiency, but allows the flexibility of microservices, as each sub-project has its own dependencies and configuration.',
     },
     // {
     //     title: 'dminjs',
