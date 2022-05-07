@@ -9,7 +9,7 @@ const projects = [
     {
         title: 'Reason Sound Pack Viewer',
         github: 'reason-sound-pack-viewer',
-        demoUrl: 'https://reason-packs.allengarvey.com',
+        demoUrl: 'https://reason.strangescenery.com',
         logo: 'reason-packs-icon.svg',
         description: '<a href="https://www.reasonstudios.com/">Reason+</a> is a subscription service that allows users to download sounds and presets in the form of sound packs for use in Reason. Using the desktop companion app, subscribers can view and download the packs, but non-subscribers and users that don\'t have the app are limited to the <a href="https://share.reasonstudios.com/">Reason+ share site.</a> I reversed engineered the API, and used Vue to create a fully featured single page app so users can quickly and easily preview all the sound packs.',
     },
