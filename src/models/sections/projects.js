@@ -14,6 +14,13 @@ const projects = [
         description: '<a href="https://www.reasonstudios.com/">Reason+</a> is a subscription service that allows users to download sounds and presets in the form of sound packs for use in Reason. Using the desktop companion app, subscribers can view and download the packs, but non-subscribers and users that don\'t have the app are limited to the <a href="https://share.reasonstudios.com/">Reason+ share site.</a> I reversed engineered the API, and used Vue to create a fully featured single page app so users can quickly and easily preview all the sound packs.',
     },
     {
+        title: 'WebAssembly Error Diffusion Dither Performance Comparison',
+        github: 'wasm-error-diffusion-dither-comparison',
+        demoUrl: 'https://wasm.dithermark.com',
+        logo: 'wasm-comparison-icon.svg',
+        description: 'Web app built with Vue that allows the user to compare the performance of JavaScript against WebAssembly generated via C++, D, Rust and Zig for dithering an image using the Stucki error diffusion algorithm.'
+    },
+    {
         title: 'Capricornus Squadron',
         github: 'capricornus-squadron',
         demoUrl: 'https://allen-garvey.github.io/capricornus-squadron',
