@@ -18,7 +18,7 @@ const projects = [
         github: 'wasm-error-diffusion-dither-comparison',
         demoUrl: 'https://wasm.dithermark.com',
         logo: 'wasm-comparison-icon.svg',
-        description: 'Web app built with Vue that allows the user to compare the performance of JavaScript against WebAssembly generated via C++, D, Rust and Zig for dithering an image using the Stucki error diffusion algorithm.'
+        description: 'Web app built with Vue that allows the user to compare the performance of JavaScript against WebAssembly generated from C++, D, Rust and Zig for dithering an image using the Stucki error diffusion algorithm.'
     },
     {
         title: 'Capricornus Squadron',
