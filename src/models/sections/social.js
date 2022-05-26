@@ -12,6 +12,10 @@ module.exports = {
                 url: 'https://github.com/allen-garvey',
             },
             {
+                title: 'LinkedIn',
+                url: 'https://www.linkedin.com/in/allen-garvey-b70610162'
+            },
+            {
                 title: 'YouTube',
                 url: 'https://www.youtube.com/channel/UC8IXyv7je-DS2a5xNlV7wHA',
             },
