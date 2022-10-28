@@ -17,7 +17,7 @@ module.exports = {
             },
             {
                 title: 'YouTube',
-                url: 'https://www.youtube.com/channel/UC8IXyv7je-DS2a5xNlV7wHA',
+                url: 'https://www.youtube.com/@allengarvey',
             },
             {
                 title: 'SoundCloud',
