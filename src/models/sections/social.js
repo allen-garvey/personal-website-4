@@ -12,16 +12,12 @@ module.exports = {
                 url: 'https://github.com/allen-garvey',
             },
             {
-                title: 'LinkedIn',
-                url: 'https://www.linkedin.com/in/allen-garvey-b70610162'
+                title: 'Music',
+                url: 'https://music.allengarvey.com',
             },
             {
                 title: 'YouTube',
                 url: 'https://www.youtube.com/@allengarvey',
-            },
-            {
-                title: 'SoundCloud',
-                url: 'https://soundcloud.com/allengarvey',
             },
             {
                 title: 'Artwork',
@@ -30,6 +26,10 @@ module.exports = {
             {
                 title: 'Instagram',
                 url: 'https://www.instagram.com/strangescenery',
+            },
+            {
+                title: 'LinkedIn',
+                url: 'https://www.linkedin.com/in/allen-garvey-b70610162'
             },
         ],
     },
