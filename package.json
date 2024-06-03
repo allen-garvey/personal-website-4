@@ -19,18 +19,18 @@
   },
   "homepage": "https://github.com/allen-garvey/personal-website-4#readme",
   "devDependencies": {
-    "css-loader": "^6.8.1",
-    "express": "^4.18.2",
+    "css-loader": "^7.1.2",
+    "express": "^4.19.2",
     "express-handlebars": "^7.1.2",
-    "memfs": "^4.5.0",
-    "mini-css-extract-plugin": "^2.7.6",
-    "mocha": "^10.2.0",
-    "node-sass": "^9.0.0",
-    "nodemon": "^3.0.1",
-    "open-cli": "^7.2.0",
-    "sass-loader": "^13.3.2",
-    "webpack": "^5.88.2",
+    "memfs": "^4.9.2",
+    "mini-css-extract-plugin": "^2.9.0",
+    "mocha": "^10.4.0",
+    "nodemon": "^3.1.2",
+    "open-cli": "^8.0.0",
+    "sass": "^1.77.4",
+    "sass-loader": "^14.2.1",
+    "webpack": "^5.91.0",
     "webpack-cli": "^5.1.4",
-    "ws": "^8.14.2"
+    "ws": "^8.17.0"
   }
 }
