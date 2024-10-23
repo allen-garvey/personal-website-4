@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-function serveImage(req, res, sourceDir){
+function serveImage(imageName, res, sourceDir) {
     const mimeTypes = {
         '.jpg': 'image/jpeg',
         '.jpeg': 'image/jpeg',
@@ -9,7 +9,6 @@ function serveImage(req, res, sourceDir){
         '.svg': 'image/svg+xml',
         '.webp': 'image/webp',
     };
-    const imageName = req.params.imageName;
 
     fs.readFile(path.resolve(sourceDir, imageName), (err, data) => {
         if (err) throw err;
