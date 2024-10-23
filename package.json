@@ -2,7 +2,7 @@
   "name": "allen-garvey-personal-website-4",
   "version": "1.0.0",
   "description": "Personal website of Allen Garvey",
-  "main": "gulpfile.js",
+  "main": "src/index.js",
   "scripts": {
     "start": "open-cli http://localhost:3000 && nodemon src/index.js",
     "test": "mocha",
