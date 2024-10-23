@@ -4,7 +4,7 @@
   "description": "Personal website of Allen Garvey",
   "main": "src/index.js",
   "scripts": {
-    "start": "open-cli http://localhost:3000 && nodemon src/index.js",
+    "start": "nodemon src/index.js",
     "test": "mocha",
     "deploy": "node src/build.js"
   },
@@ -26,7 +26,6 @@
     "mini-css-extract-plugin": "^2.9.1",
     "mocha": "^10.7.3",
     "nodemon": "^3.1.7",
-    "open-cli": "^8.0.0",
     "sass": "^1.80.3",
     "sass-loader": "^16.0.2",
     "webpack": "^5.95.0",
