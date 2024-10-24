@@ -12,8 +12,10 @@ body, h1, h2, h3, p, hr, ol, ul{
  * Basic styling
  */
 body {
-    font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
-    color: $text-color;
+    font-family: 'Noto Sans', 'Roboto', -apple-system, 'Helvetica Neue', Helvetica, 'Ubuntu', 'Calibri', 'Arial', sans-serif;
+    line-height: 1.5;
+    --body-text-color: #000;
+    color: var(--body-text-color);
     background-color: #eeffee;
     -webkit-text-size-adjust: 100%;
     -webkit-font-feature-settings: "kern" 1;
@@ -71,7 +73,7 @@ h2{
 }
 h3{
     font-size: 1.333em;
-    font-weight: $base-font-weight;
+    font-weight: 400;
 }
 
 
@@ -80,15 +82,14 @@ h3{
  * Links
  */
 a {
-    color: $brand-color;
+    color: #1467d3;
     text-decoration: none;
 
     &:visited {
-        color: darken($brand-color, 15%);
+        color: purple;
     }
 
     &:hover {
-        color: $text-color;
         text-decoration: underline;
     }
 }

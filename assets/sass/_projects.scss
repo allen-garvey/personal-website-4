@@ -27,7 +27,7 @@
 .project-title{
 	margin-bottom: 0.1em;
 	a{
-		color: $text-color;
+		color: var(--body-text-color);
 	}
 }
 .project-logo{
