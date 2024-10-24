@@ -32,15 +32,11 @@
 }
 .project-logo{
 	padding: 1em;
-	flex-basis: 100px;
+	flex-basis: 110px;
 
 	@include mixins.media-query(variables.$on-laptop) {
-        flex-basis: 67px;
-	}
-	
-	@include mixins.media-query(variables.$on-palm) {
         display: none;
-    }
+	}
 }
 .project-content{
 	flex-basis: 95%;
