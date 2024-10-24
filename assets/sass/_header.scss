@@ -1,6 +1,6 @@
-/**
- * Site header
- */
+@use 'variables';
+@use 'mixins';
+
 .site-header {
     padding: 3em 0 2.5em;
 	text-align: center;
@@ -25,7 +25,7 @@
 .author-img{
     width: 168px;
     border-radius: 50%;
-    @include material;
+    @include mixins.material;
 }
 .site-title{
 	margin: -8px 0 0;
@@ -38,7 +38,7 @@
 	top: -3px;
 	z-index: 100;
 	padding: 0 6px;
-	box-shadow: $material-shadow-light;
+	box-shadow: variables.$material-shadow-light;
 }
 .tagline-overlay{
 	position: absolute;

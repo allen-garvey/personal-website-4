@@ -1,3 +1,6 @@
+@use 'variables';
+@use 'mixins';
+
 .project-links{
 	margin-top: 0.5em;
 	display: flex;
@@ -5,14 +8,14 @@
 }
 
 .projects-list {
-	margin-left: $project-icon-width * -1;
+	margin-left: variables.$project-icon-width * -1;
 
-	@include media-query($on-laptop) {
+	@include mixins.media-query(variables.$on-laptop) {
         margin-left: 0;
     }
 
 	li{
-		margin-bottom: $spacing-unit * 1.5;
+		margin-bottom: variables.$spacing-unit * 1.5;
 		display: flex;
 
 		&:last-of-type{
@@ -31,11 +34,11 @@
 	padding: 1em;
 	flex-basis: 100px;
 
-	@include media-query($on-laptop) {
+	@include mixins.media-query(variables.$on-laptop) {
         flex-basis: 67px;
 	}
 	
-	@include media-query($on-palm) {
+	@include mixins.media-query(variables.$on-palm) {
         display: none;
     }
 }

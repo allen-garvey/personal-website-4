@@ -1,12 +1,8 @@
 
 @charset 'utf-8';
 
-@import
-		'variables',
-		'mixins',
-        'base',
-        'header',
-        'projects',
-        'social',
-        'home'
-;
+@use 'base';
+@use 'header';
+@use 'projects';
+@use 'social';
+@use 'home';
