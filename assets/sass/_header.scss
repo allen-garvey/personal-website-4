@@ -5,13 +5,8 @@
     padding: 3em 0 2.5em;
 	text-align: center;
 	background-color: #30492d;
-	background-position: center;
-	background-image: url('/images/sound-of-my-voice-canvas.jpg');
-	background-image: url('/images/sound-of-my-voice-canvas.webp');
-	image-rendering: -webkit-crisp-edges; // Safari 7+
-	image-rendering: -moz-crisp-edges; // Firefox 3.6+
-	image-rendering: -o-crisp-edges; // Opera 12
-	image-rendering: pixelated; // Chrome 41+ and Opera 26+
+	background-position: left;
+	background-image: url('/images/sound-of-my-voice-texture.jpg');
 	position: relative;
 
 	// based on: https://una.im/vignettes/
