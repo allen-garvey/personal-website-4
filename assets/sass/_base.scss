@@ -117,3 +117,17 @@ a {
     font-weight: 400;
 }
 
+@media (prefers-color-scheme: dark) {
+    body {
+        --body-text-color: #fff;
+        background-color: #121;
+    }
+    a {
+        color: #4b99ff;
+    
+        &:visited {
+            color: rgb(201, 108, 201);
+        }
+    }
+}
+
