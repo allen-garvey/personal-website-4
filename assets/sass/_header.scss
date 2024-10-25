@@ -18,14 +18,13 @@
 	  }
 }
 .author-img{
-    width: 168px;
+    width: 162px;
     border-radius: 50%;
-    @include mixins.material;
 }
 .site-title{
 	margin: -8px 0 0;
 	color: #f6fff0;
-	text-shadow: 0px -1px 10px #333; //similar to material shadow, but slightly reduced to recede into background
+	text-shadow: 0px -1px 10px #333;
 }
 .tagline{
 	display: inline-block;
@@ -61,6 +60,7 @@
 		width: 94px;
 	}
 	.site-title{
+		font-size: 2.5rem;
 		margin-top: -10px;
 	}
 }
