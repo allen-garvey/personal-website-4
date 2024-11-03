@@ -2,7 +2,13 @@
     {{#each content.projects}}
          <li>
             <div class="project-logo">
+                {{#if this.demoUrl}}
+                    <a href="{{ this.demoUrl }}">
+                {{/if}}
                 <img src="{{ iconUrl this.logo }}" alt="{{ this.title }} logo" loading="lazy">
+                {{#if this.demoUrl}}
+                    </a>
+                {{/if}}
             </div>
             <div class="project-content">
                 <h3 class="project-title">
