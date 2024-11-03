@@ -20,7 +20,7 @@ const projects = [
         ],
     },
     {
-        title: 'WebAssembly Error Diffusion Dither Performance Comparison',
+        title: 'WebAssembly Performance Comparison',
         github: 'wasm-error-diffusion-dither-comparison',
         demoUrl: 'https://wasm.dithermark.com',
         logo: 'wasm-comparison-icon.svg',
