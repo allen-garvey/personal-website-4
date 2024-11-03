@@ -9,7 +9,9 @@
                     <a href="{{ this.url }}">{{ smartenQuotes this.title }}</a>
                 </h3>     
                 <div>
-                    {{{ smartenQuotes this.description }}}
+                    {{#each this.description}}
+                        <p>{{{ smartenQuotes this }}}</p>
+                    {{/each}}
                     <div class="project-links">
                         <a href="{{ this.githubUrl }}">GitHub</a>
                     {{#if this.demoUrl}}
