@@ -5,7 +5,7 @@ const projects = [
         demoUrl: 'https://dithermark.com',
         logo: 'dithermark-icon.svg',
         description:
-            'Web app that allows you to quickly and easily transform photos into original pixel art. It includes variations on many popular image dithering algorithms, as well as original color quantization algorithm research. Built with Vue, it uses the Canvas API, Web Workers, WebGL and the Unsplash photo API for random images.',
+            'After reading <a href="https://tannerhelland.com/2012/12/28/dithering-eleven-algorithms-source-code.html">this article on dithering,</a> I was excited to try it on my own pictures, but at that time I wasn\'t able to find any apps that let you do this. That led me to create my own app, however as I kept adding other image processing techniques it morphed into a tool that allows you to quickly and easily transform photos into pixel art. <br><br>Since then people have found other uses, such as: <a href="https://alessandrina.com/2023/08/04/gimp-4-pattern-fill-dithered-portraits-and-more/">creating patterns for knitting,</a> teaching in an art school, and <a href="https://developers.ledger.com/docs/nft-display/optimized-images#use-dithermark-to-convert-your-image">optimizing images for the Ledger Stax lock screen.</a> It includes variations on many popular image dithering algorithms, as well as original color quantization algorithm research. Built with Vue, it uses the Canvas API, Web Workers, WebGL and the Unsplash photo API for random images.',
     },
     {
         title: 'Reason Sound Pack Viewer',
@@ -13,7 +13,7 @@ const projects = [
         demoUrl: 'https://reason.pluginista.com',
         logo: 'reason-packs-icon.svg',
         description:
-            '<a href="https://www.reasonstudios.com/">Reason+</a> is a subscription service that allows users to download sounds and presets in the form of sound packs for use in Reason. Using the desktop companion app, subscribers can view and download the packs, but non-subscribers and users that don\'t have the app are limited to the <a href="https://share.reasonstudios.com/">Reason+ share site.</a> I reversed engineered the API, and used Vue to create a fully featured single page app so users can quickly and easily preview all the sound packs.',
+            '<a href="https://www.reasonstudios.com/">Reason+</a> is a subscription service that allows users to download sounds and presets in the form of sound packs for use in Reason. Using the desktop companion app, subscribers can view and download the packs, but non-subscribers and users that don\'t have the app are limited to the <a href="https://share.reasonstudios.com/">Reason+ share site.</a> I reversed engineered the API, and used Vue to create a fully featured single page app so musicians can quickly and easily preview all the sound packs.',
     },
     {
         title: 'WebAssembly Error Diffusion Dither Performance Comparison',
