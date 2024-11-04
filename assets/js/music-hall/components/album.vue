@@ -1,11 +1,5 @@
 <template>
 <div :class="$style.overallTrackContainer">
-    <AlbumHeader 
-        :album="album"
-        :is-playing="isAlbumPlaying(album)"
-        :play-button-clicked="() => albumPlayButtonClicked(album)"
-        :show-share-link="showAlbumShareLinks"
-    />
     <table :class="$style.table">
         <thead>
             <tr>
@@ -168,7 +162,6 @@
 
 <script lang="ts">
 import { defineComponent, PropType } from 'vue';
-import AlbumHeader from './album-header.vue';
 import { Album } from '../models/tracks';
 import { yearDescriptionForAlbum } from '../models/album-helpers';
 import { formatSeconds } from '../view-helpers/time';
@@ -203,9 +196,6 @@ export default defineComponent({
             type: Boolean,
             default: true,
         },
-    },
-    components: {
-        AlbumHeader,
     },
     methods: {
         formatSeconds,
