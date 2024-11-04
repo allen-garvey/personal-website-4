@@ -8,8 +8,6 @@
             :is-album-playing="isAlbumPlaying"
             :track-button-clicked="trackButtonClicked"
             :album-play-button-clicked="albumPlayButtonClicked"
-            :show-share-links="shouldShowTrackShareLinks"
-            :show-album-share-links="shouldShowAlbumShareLinks"
         />
         <MediaControls 
             :current-track="currentTrack" 
@@ -49,16 +47,6 @@ import MediaControls from './media-controls.vue';
 import { albums } from '../models/tracks';
 
 export default defineComponent({
-    props: {
-        shouldShowTrackShareLinks: {
-            type: Boolean,
-            default: true,
-        },
-        shouldShowAlbumShareLinks: {
-            type: Boolean,
-            default: false,
-        },
-    },
     components: {
         AlbumComponent,
         MediaControls,

@@ -7,7 +7,6 @@
                 <th :class="$style.titleColumn">Title</th>
                 <th :class="$style.timeColumn">Time</th>
                 <th :class="$style.yearColumn">Year</th>
-                <th :class="$style.shareColumn" v-if="showShareLinks"></th>
             </tr>
         </thead>
         <tbody>
@@ -39,19 +38,6 @@
                 <td>{{ track.title }}</td>
                 <td>{{ formatSeconds(track.length) }}</td>
                 <td>{{ track.year }}</td>
-                <td v-if="showShareLinks">
-                    <router-link 
-                        :to="{ name: 'trackShow', params: { filename: track.filename } }"
-                        :class="$style.shareLink"
-                    >
-                        <svg 
-                            :class="$style.icon"
-                            viewBox="0 0 24 24"
-                        >
-                            <use xlink:href="#icon-share" />
-                        </svg>
-                    </router-link>
-                </td>
             </tr>
         </tbody>
     </table>
@@ -187,14 +173,6 @@ export default defineComponent({
         albumPlayButtonClicked: {
             required: true,
             type: Function as PropType<(album: Album) => void>,
-        },
-        showShareLinks: {
-            type: Boolean,
-            default: false,
-        },
-        showAlbumShareLinks: {
-            type: Boolean,
-            default: true,
         },
     },
     methods: {
