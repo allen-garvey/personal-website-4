@@ -1,0 +1,11 @@
+// styles from music-hall
+#music-playlist {
+    button {
+        background-color: transparent;
+        border: none;
+    
+        &:focus-visible {
+            outline: #0f0 solid 2px;
+        }
+    }
+}
