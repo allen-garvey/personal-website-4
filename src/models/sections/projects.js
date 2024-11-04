@@ -70,7 +70,6 @@ const projects = [
 });
 
 module.exports = {
-    title: 'Projects',
     slug: 'projects',
     heading: 'Projects',
     headingLink: {

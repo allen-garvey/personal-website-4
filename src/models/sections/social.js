@@ -1,5 +1,4 @@
 module.exports = {
-    title: 'Social',
     slug: 'social',
     heading: 'Social',
     content: {

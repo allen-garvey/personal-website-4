@@ -1,5 +1,4 @@
 module.exports = {
-    title: 'About',
     slug: 'about',
     heading: `Hi, I'm Allen.`,
     content: {
