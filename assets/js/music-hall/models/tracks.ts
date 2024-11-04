@@ -253,7 +253,7 @@ export const albums: Album[] = [
         },
         tracks: [
             {
-                title: 'Pyschic Cleansing',
+                title: 'Psychic Cleansing',
                 // completion_date: '2022-11-02',
                 year: 2019,
                 filename: 'nightscapes-dreamscapes/psychic-cleansing',
