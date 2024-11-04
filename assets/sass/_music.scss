@@ -1,5 +1,15 @@
-// styles from music-hall
+@use 'variables';
+@use 'mixins';
+
 #music-playlist {
+    margin-left: -3rem;
+
+	@include mixins.media-query(variables.$on-laptop) {
+        margin-left: 0;
+    }
+
+
+    // styles from music-hall
     button {
         background-color: transparent;
         border: none;
