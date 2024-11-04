@@ -2,7 +2,7 @@ module.exports = {
     slug: 'music',
     heading: 'Music',
     headingLink: {
-        text: 'music.allengarvey.com',
+        text: 'Full catalog',
         url: 'https://music.allengarvey.com',
     },
     content: {},
