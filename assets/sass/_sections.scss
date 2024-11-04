@@ -1,0 +1,15 @@
+.section-header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    align-items: baseline;
+}
+
+.section-heading {
+    font-weight: 400;
+}
+
+a.section-heading-link {
+    color: #888;
+    font-size: 0.9rem;
+}

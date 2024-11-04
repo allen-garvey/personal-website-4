@@ -8,10 +8,6 @@ module.exports = {
                 title: 'Email',
             },
             {
-                title: 'GitHub',
-                url: 'https://github.com/allen-garvey',
-            },
-            {
                 title: 'Music',
                 url: 'https://music.allengarvey.com',
             },
@@ -29,7 +25,7 @@ module.exports = {
             },
             {
                 title: 'LinkedIn',
-                url: 'https://www.linkedin.com/in/allen-garvey-b70610162'
+                url: 'https://www.linkedin.com/in/allen-garvey-b70610162',
             },
         ],
     },

@@ -73,6 +73,10 @@ module.exports = {
     title: 'Projects',
     slug: 'projects',
     heading: 'Projects',
+    headingLink: {
+        text: 'GitHub',
+        url: 'https://github.com/allen-garvey',
+    },
     content: {
         projects,
     },
