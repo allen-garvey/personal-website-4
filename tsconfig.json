@@ -1,0 +1,27 @@
+{
+    "compilerOptions": {
+      "target": "es2020",
+      "module": "esnext",
+      "strict": true,
+      "jsx": "preserve",
+      "moduleResolution": "node",
+      "noFallthroughCasesInSwitch": false,
+      "noImplicitAny": false,
+      "baseUrl": ".",
+      "skipLibCheck": true,
+      "paths": {
+        "@/*": [
+          "assets/js/*"
+        ]
+      },
+    },
+    "include": [
+      "assets/js/*.js",
+      "assets/js/*.ts",
+      "assets/js/**/*.ts",
+      "assets/js/**/*.vue",
+    ],
+    "exclude": [
+      "node_modules"
+    ]
+  }
