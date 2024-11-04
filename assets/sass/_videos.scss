@@ -1,0 +1,9 @@
+.videos-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.video-thumbnail {
+    max-width: 320px;
+}

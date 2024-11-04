@@ -11,10 +11,6 @@ module.exports = {
                 url: 'https://music.allengarvey.com',
             },
             {
-                title: 'YouTube',
-                url: 'https://www.youtube.com/@allengarvey',
-            },
-            {
                 title: 'Artwork',
                 url: 'https://strangescenery.com',
             },

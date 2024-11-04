@@ -1,0 +1,15 @@
+<ul class="videos-list">
+    {{#each content.videos}}
+         <li>
+            <a href="{{this.url}}">
+                <img 
+                    src="{{this.thumbnailUrl}}" 
+                    alt="{{this.title}}" 
+                    title="{{this.title}}" 
+                    loading="lazy" 
+                    class="video-thumbnail"
+                />
+            </a>
+        </li>
+    {{/each}}
+</ul>
