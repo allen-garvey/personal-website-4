@@ -23,11 +23,11 @@ function addRoutes(app, fs, websocketPort) {
         );
     });
 
-    app.get('/images/icons/:imageName', (req, res) => {
+    app.get('/images/:folder/:imageName', (req, res) => {
         serveImage(
             req.params.imageName,
             res,
-            path.resolve(webpackConstants.imagesPath, 'icons')
+            path.resolve(webpackConstants.imagesPath, req.params.folder)
         );
     });
 
