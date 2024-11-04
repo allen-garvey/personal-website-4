@@ -7,10 +7,6 @@ module.exports = {
                 title: 'Email',
             },
             {
-                title: 'Music',
-                url: 'https://music.allengarvey.com',
-            },
-            {
                 title: 'Artwork',
                 url: 'https://strangescenery.com',
             },
