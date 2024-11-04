@@ -77,7 +77,7 @@
         }
 
         &:hover, &:focus, &:focus-within {
-            background-color: #bdeeff;
+            background-color: #def7c7;
             .trackButton, .shareLink {
                 visibility: visible;
             }
@@ -91,7 +91,7 @@
         .trackRow {
             &:hover, &:focus, &:focus-within {
                 color: #000;
-                background-color: #cee6ff;
+                background-color: #e6ffce;
             }
         }
     }

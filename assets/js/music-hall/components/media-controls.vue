@@ -88,7 +88,7 @@ $breakpoint: 600px;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: #245261;
+    background-color: #314a31;
     color: #fff;
     text-align: center;
     box-shadow: 0 -5px 15px rgba(84, 22, 8, 0.2);
@@ -101,8 +101,7 @@ $breakpoint: 600px;
 
 @media (prefers-color-scheme: dark) {
     .container {
-        background-color: #22234b;
-        background-color: #111840;
+        background-color: #1f3e1f;
     }
 }
 
@@ -139,6 +138,7 @@ $breakpoint: 600px;
     
     input[type="range"] {
         width: 100%;
+        accent-color: #25a225;
     }
 }
 
