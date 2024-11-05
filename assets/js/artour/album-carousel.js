@@ -2,7 +2,7 @@
  * Functionality to display album show pages in lightbox
  */
 
-import { createDiv, getData, mapElements } from './dom-helpers';
+import { createDiv } from './dom-helpers';
 
 const FIRST_IMAGE_CLASS = 'first-image';
 const LAST_IMAGE_CLASS = 'last-image';
@@ -12,15 +12,13 @@ let currentImageIndex = null;
 let isLightboxVisible = false;
 
 function initializeSlideData(links) {
-    return mapElements(links, (link) => {
-        return {
-            caption: getData(link, 'caption'),
-            src: getData(link, 'src'),
-            srcset: getData(link, 'srcset'),
-            id: getData(link, 'slug'),
-            isInitialized: false,
-        };
-    });
+    return [...links].map((link) => ({
+        caption: link.dataset.caption,
+        src: link.dataset.src,
+        srcset: link.dataset.srcset,
+        id: link.dataset.slug,
+        isInitialized: false,
+    }));
 }
 
 function initializeLightbox(numImageLinks) {
