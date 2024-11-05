@@ -71,6 +71,7 @@ const projects = [
 
 module.exports = {
     slug: 'projects',
+    template: 'projects',
     heading: 'Projects',
     headingLink: {
         text: 'GitHub',

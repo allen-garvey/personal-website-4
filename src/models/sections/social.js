@@ -1,5 +1,6 @@
 module.exports = {
     slug: 'social',
+    template: 'social',
     heading: 'Social',
     content: {
         socialList: [

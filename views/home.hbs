@@ -8,7 +8,7 @@
                         <a href="{{ headingLink.url }}" class="section-heading-link">{{headingLink.text}}</a>
                     {{/if}}
                 </div>
-                {{> (lookup . 'slug') content=content}}
+                {{> (lookup . 'template') content=content}}
             </section>
         {{/with}}
     {{/each}}

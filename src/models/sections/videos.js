@@ -23,6 +23,7 @@ const videos = [
 
 module.exports = {
     slug: 'videos',
+    template: 'videos',
     heading: 'Videos and Rescores',
     headingLink: {
         text: 'YouTube',
