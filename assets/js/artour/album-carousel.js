@@ -1,6 +1,10 @@
 const FIRST_IMAGE_CLASS = 'first-image';
 const LAST_IMAGE_CLASS = 'last-image';
 
+const LIGHTBOX_CONTAINER = document.getElementById('lightbox-container');
+const LIGHTBOX_IMAGE = document.getElementById('lightbox-image');
+const CAPTION_BODY = document.querySelector('.caption-body');
+
 let currentSlideshowKey = null;
 let currentImageIndex = null;
 let isLightboxVisible = false;
@@ -62,26 +66,23 @@ function setVisibleImageAt(slideshowKey, imageIndex) {
     const slideshow = slideshows[slideshowKey];
 
     // hide or show prev / next buttons
-    const controlsContainer = document.getElementById('lightbox-container');
     if (imageIndex === 0) {
-        controlsContainer.classList.add(FIRST_IMAGE_CLASS);
+        LIGHTBOX_CONTAINER.classList.add(FIRST_IMAGE_CLASS);
     } else {
-        controlsContainer.classList.remove(FIRST_IMAGE_CLASS);
+        LIGHTBOX_CONTAINER.classList.remove(FIRST_IMAGE_CLASS);
     }
 
     if (imageIndex === slideshow.imageLinks.length - 1) {
-        controlsContainer.classList.add(LAST_IMAGE_CLASS);
+        LIGHTBOX_CONTAINER.classList.add(LAST_IMAGE_CLASS);
     } else {
-        controlsContainer.classList.remove(LAST_IMAGE_CLASS);
+        LIGHTBOX_CONTAINER.classList.remove(LAST_IMAGE_CLASS);
     }
 
     const currentImageData = slideshow.imageLinks[imageIndex];
-    const imgTag = document.getElementById('lightbox-image');
-    imgTag.src = currentImageData.src;
-    imgTag.srcset = currentImageData.srcset;
+    LIGHTBOX_IMAGE.src = currentImageData.src;
+    LIGHTBOX_IMAGE.srcset = currentImageData.srcset;
 
-    document.querySelector('.caption-body').textContent =
-        currentImageData.caption;
+    CAPTION_BODY.textContent = currentImageData.caption;
 }
 
 function displayLightbox() {
@@ -89,12 +90,12 @@ function displayLightbox() {
         return;
     }
     isLightboxVisible = true;
-    document.querySelector('.lightbox-container').classList.remove('hidden');
+    LIGHTBOX_CONTAINER.classList.remove('hidden');
 }
 
 function hideLightbox() {
     isLightboxVisible = false;
-    document.querySelector('.lightbox-container').classList.add('hidden');
+    LIGHTBOX_CONTAINER.classList.add('hidden');
 }
 
 function initializeImageSwipeHandlers() {
