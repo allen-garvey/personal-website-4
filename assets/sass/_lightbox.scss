@@ -1,0 +1,136 @@
+// Adapted from Artour
+
+@media screen and (max-width: 663px){
+	.post-thumbnails{
+		justify-content: center;
+	}
+}
+
+.lightbox-container, .lightbox-background{
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+}
+
+.lightbox-container{
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	
+	&.hidden{
+		display: none;
+	}
+
+	&.first-image .slideshow-left-button {
+		visibility: hidden;
+	}
+
+	&.last-image .slideshow-right-button {
+		visibility: hidden;
+	}
+	
+	.lightbox-background{
+		background-color: black;
+		opacity: 0.8;
+		z-index: 1;
+	}
+
+	.lightbox-images-container{
+		z-index: 99;
+		img{
+			max-height: 100vh;
+		}
+		
+		.image-container{
+			transition: translateX 0.3s;
+			display: none;
+			&.active{
+				display: block;
+			}
+		}
+	}
+	//buttons
+	$lightbox_button_dimensions: 45px;
+	.lightbox-bottom-container{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		top: calc(100vh - #{$lightbox_button_dimensions * 2 + 50px});
+		z-index: 100;
+	}
+	.caption-container{
+		position: relative;
+		text-align: center;
+		font-size: 1em;
+		padding: 0.7em;
+		margin-bottom: 10px;
+		max-width: 30em;
+
+		.caption-overlay{
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background-color: black;
+			opacity: 0.4;
+		}
+		.caption-body{
+			position: relative;
+			z-index: 100;
+			color: white;
+		}
+		.caption-body:empty + .caption-overlay{
+			display: none;
+		}
+	}
+
+	.slideshow-right-button {
+		right: 10px;
+	}
+
+	.slideshow-left-button {
+		left: 10px;
+	}
+
+	.slideshow-right-button, .slideshow-left-button, .close-window-button{
+		border: none;
+		background-color: transparent;
+		box-sizing: content-box;
+		cursor: pointer;
+		width: 70px;
+		opacity: 0.5;
+		position: absolute;
+		z-index: 199;
+		top: calc(50% - 50px);
+		
+		&:hover, &:focus{
+			font-weight: bold;
+			opacity: 1;
+		}
+	}
+
+	.slideshow-right-button, .slideshow-left-button {
+		padding: 50px 0;
+
+		@media screen and (max-width: 700px) {
+			width: 60px;
+			bottom: 0;
+			padding: 30px 0 10px;
+			top: unset;
+		}
+	}
+
+	.close-window-button{
+		top: 12px;
+		right: 8px;
+		height: 60px;
+		width: 60px;
+	}
+}

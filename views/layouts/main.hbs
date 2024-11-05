@@ -13,6 +13,7 @@
     <div class="page-content">
         {{{ body }}}
     </div>
+    {{>lightbox}}
     <script>{{{ scriptContent }}}</script>
     {{#if websocketPort}}
         {{>websocket-js websocketPort=websocketPort }}

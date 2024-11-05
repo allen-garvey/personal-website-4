@@ -1,10 +1,11 @@
-<ul class="slideshow-list">
+<ul class="slideshow-list lightbox-images-container">
     {{#each content.images}}
-         <li>
+         <li class="post-thumbnails">
             <a 
                 href="{{this.url.large}}"
                 data-caption="{{this.caption}}"
-                data-src="{{this.url.small}}" 
+                data-src="{{this.url.small}}"
+                data-srcset="{{this.url.small}} 400w, {{this.url.medium}} 800w {{this.url.large}} 1000w" 
                 data-slug="{{this.id}}"
             >
                 <img 
