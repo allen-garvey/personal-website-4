@@ -1,42 +1,48 @@
-/*
- * Functionality to display album show pages in lightbox
- */
-
-import { createDiv } from './dom-helpers';
-
 const FIRST_IMAGE_CLASS = 'first-image';
 const LAST_IMAGE_CLASS = 'last-image';
-const imageLinks = document.querySelectorAll(
-    '[data-slideshow-images] a[data-slideshow-image]'
-);
-const slideData = initializeSlideData(imageLinks);
+
+let currentSlideshowKey = null;
 let currentImageIndex = null;
 let isLightboxVisible = false;
 
-function initializeSlideData(links) {
-    return [...links].map((link) => ({
-        caption: link.dataset.caption,
-        src: link.dataset.src,
-        srcset: link.dataset.srcset,
-        id: link.dataset.slug,
-        isInitialized: false,
-    }));
+const slideshows = initializeSlideshowModels();
+
+function initializeSlideshowModels() {
+    const ret = {};
+
+    document
+        .querySelectorAll('[data-slideshow-images]')
+        .forEach((slideshowParent) => {
+            const key = slideshowParent.dataset.slideshowImages;
+
+            ret[key] = {
+                imageLinks: [
+                    ...slideshowParent.querySelectorAll(
+                        'a[data-slideshow-image]'
+                    ),
+                ].map((link, i) => {
+                    link.onclick = (e) => {
+                        e.preventDefault();
+                        setVisibleImageAt(key, i);
+                        displayLightbox();
+                    };
+
+                    return {
+                        caption: link.dataset.caption,
+                        src: link.dataset.src,
+                        srcset: link.dataset.srcset,
+                        id: link.dataset.slug,
+                    };
+                }),
+            };
+        });
+
+    return ret;
 }
 
-function initializeLightbox(numImageLinks) {
+function initializeLightbox() {
     const lightboxBackground = document.querySelector('.lightbox-background');
     lightboxBackground.onclick = hideLightbox;
-
-    const imagesContainer = document.querySelector(
-        '.lightbox-images-container'
-    );
-    const imagesFragment = document.createDocumentFragment();
-    //add empty placeholder divs for images
-    //will be lazy loaded by inserting img tag when necessary
-    for (let i = 0; i < numImageLinks; i++) {
-        imagesFragment.appendChild(createDiv('image-container'));
-    }
-    imagesContainer.appendChild(imagesFragment);
 
     const closeButton = document.querySelector('.close-window-button');
     closeButton.onclick = hideLightbox;
@@ -49,10 +55,11 @@ function initializeLightbox(numImageLinks) {
     rightButton.onclick = showNextImage;
 }
 
-//displays image at index
-//creates img tag if necessary - used for lazy loading
-function setVisibleImageAt(imageIndex) {
+function setVisibleImageAt(slideshowKey, imageIndex) {
+    currentSlideshowKey = slideshowKey;
     currentImageIndex = imageIndex;
+
+    const slideshow = slideshows[slideshowKey];
 
     // hide or show prev / next buttons
     const controlsContainer = document.getElementById('lightbox-container');
@@ -62,38 +69,25 @@ function setVisibleImageAt(imageIndex) {
         controlsContainer.classList.remove(FIRST_IMAGE_CLASS);
     }
 
-    if (imageIndex === slideData.length - 1) {
+    if (imageIndex === slideshow.imageLinks.length - 1) {
         controlsContainer.classList.add(LAST_IMAGE_CLASS);
     } else {
         controlsContainer.classList.remove(LAST_IMAGE_CLASS);
     }
 
-    const parentSelector = `.lightbox-images-container .image-container:nth-child(${
-        imageIndex + 1
-    })`;
-    const parent = document.querySelector(parentSelector);
-    const currentImageData = slideData[imageIndex];
-    //initialize img tag if necessary
-    if (!currentImageData.isInitialized) {
-        currentImageData.isInitialized = true;
-        const imgTag = document.createElement('img');
-        imgTag.src = currentImageData.src;
-        imgTag.srcset = currentImageData.srcset;
-        parent.appendChild(imgTag);
-    }
+    const currentImageData = slideshow.imageLinks[imageIndex];
+    const imgTag = document.getElementById('lightbox-image');
+    imgTag.src = currentImageData.src;
+    imgTag.srcset = currentImageData.srcset;
+
     document.querySelector('.caption-body').textContent =
         currentImageData.caption;
-
-    document
-        .querySelectorAll('.lightbox-images-container>.image-container')
-        .forEach((element, i) => {
-            const action = i === imageIndex ? 'add' : 'remove';
-            element.classList[action]('active');
-            element.style.transform = '';
-        });
 }
 
 function displayLightbox() {
+    if (isLightboxVisible) {
+        return;
+    }
     isLightboxVisible = true;
     document.querySelector('.lightbox-container').classList.remove('hidden');
 }
@@ -101,16 +95,6 @@ function displayLightbox() {
 function hideLightbox() {
     isLightboxVisible = false;
     document.querySelector('.lightbox-container').classList.add('hidden');
-}
-
-function initializeImageLinkClickHandlers(imageLinks) {
-    imageLinks.forEach((el, i) => {
-        el.onclick = (e) => {
-            e.preventDefault();
-            setVisibleImageAt(i);
-            displayLightbox();
-        };
-    });
 }
 
 function initializeImageSwipeHandlers() {
@@ -124,78 +108,46 @@ function initializeImageSwipeHandlers() {
 
     let touchStartX = null;
     let touchStartY = null;
-    let activeImageContainer = null;
+    let hasStartedSwiping = false;
 
     imagesContainer.addEventListener('touchstart', function (e) {
         // check if pinching to zoom
         if (e.touches.length > 1) {
-            activeImageContainer = null;
+            hasStartedSwiping = false;
             return;
         }
         const touch = e.touches[0];
         touchStartX = touch.clientX;
         touchStartY = touch.clientY;
-        activeImageContainer = document.querySelector(
-            '.lightbox-images-container .image-container.active'
-        );
-    });
-    imagesContainer.addEventListener('touchmove', function (e) {
-        if (activeImageContainer === null) {
-            return;
-        }
-        const isFirstImage = currentImageIndex === 0;
-        const isLastImage = currentImageIndex === slideData.length - 1;
-        const touch = e.touches[0];
-        const xCoordinate = touch.clientX;
-
-        if (
-            (isFirstImage && xCoordinate > touchStartX) ||
-            (isLastImage && xCoordinate < touchStartX)
-        ) {
-            return;
-        }
-
-        activeImageContainer.style.transform = `translateX(calc(${xCoordinate}px - 50%))`;
+        hasStartedSwiping = true;
     });
     imagesContainer.addEventListener('touchend', function (e) {
-        if (activeImageContainer === null) {
+        if (!hasStartedSwiping) {
             return;
         }
         const touch = e.changedTouches[0];
         const touchEndX = touch.clientX;
         const touchEndY = touch.clientY;
-        let thresholdMet = true;
 
         const yDifference = Math.abs(touchEndY - touchStartY);
+        // check if moved too much vertically to classify as horizontal swipe
         if (yDifference > yThreshold) {
-            thresholdMet = false;
+            return;
         }
         const xDifference = Math.abs(touchEndX - touchStartX);
+        // check if moved enough horizontally to classify as horizontal swipe
         if (xDifference < xThreshold) {
-            thresholdMet = false;
-        }
-
-        if (!thresholdMet) {
-            activeImageContainer.style.transform = 'translateX(0px)';
             return;
         }
 
         //swiped right, show previous image
         if (touchEndX > touchStartX) {
-            if (currentImageIndex > 0) {
-                showPreviousImage();
-                return;
-            }
+            showPreviousImage();
         }
         //swiped left, show next image
         else {
-            if (currentImageIndex < slideData.length - 2) {
-                showNextImage();
-                return;
-            }
+            showNextImage();
         }
-
-        activeImageContainer.style.transform = 'translateX(0px)';
     });
 }
 
@@ -224,25 +176,24 @@ function initializeKeyboardShortcuts() {
 
 function showNextImage() {
     //stop at the end
-    if (currentImageIndex >= slideData.length - 1) {
+    if (
+        currentImageIndex >=
+        slideshows[currentSlideshowKey].imageLinks.length - 1
+    ) {
         return;
     }
-    setVisibleImageAt(currentImageIndex + 1);
+    setVisibleImageAt(currentSlideshowKey, currentImageIndex + 1);
 }
 function showPreviousImage() {
     //stop at beginning
     if (currentImageIndex <= 0) {
         return;
     }
-    setVisibleImageAt(currentImageIndex - 1);
+    setVisibleImageAt(currentSlideshowKey, currentImageIndex - 1);
 }
 
 export function initializeDisplayAlbumLightbox() {
-    if (!document.querySelector('.lightbox-container')) {
-        return;
-    }
-    initializeLightbox(imageLinks.length);
-    initializeImageLinkClickHandlers(imageLinks);
+    initializeLightbox();
     initializeImageSwipeHandlers();
     initializeKeyboardShortcuts();
 }
