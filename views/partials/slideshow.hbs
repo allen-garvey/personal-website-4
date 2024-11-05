@@ -1,0 +1,18 @@
+<ul class="slideshow-list">
+    {{#each content.images}}
+         <li>
+            <a 
+                href="{{this.url.large}}"
+                data-caption="{{this.caption}}"
+                data-src="{{this.url.small}}" 
+                data-slug="{{this.id}}"
+            >
+                <img 
+                    src="{{this.url.thumbnail}}" 
+                    alt="{{this.description}}" 
+                    loading="lazy" 
+                />
+            </a>
+        </li>
+    {{/each}}
+</ul>

@@ -8,10 +8,6 @@ module.exports = {
                 title: 'Email',
             },
             {
-                title: 'Artwork',
-                url: 'https://strangescenery.com',
-            },
-            {
                 title: 'Instagram',
                 url: 'https://www.instagram.com/strangescenery',
             },
