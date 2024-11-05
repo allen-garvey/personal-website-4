@@ -12,7 +12,7 @@
         <tbody>
             <tr 
                 v-for="(track, trackIndex) in album.tracks" 
-                :key="`${album.meta.title}-${track.filename}-${track.title}`"
+                :key="`${album.meta.slug}-${track.filename}-${track.title}`"
                 :class="$style.trackRow"
             >
                 <td :class="$style.iconContainer" tabindex="0">
@@ -149,7 +149,6 @@
 <script lang="ts">
 import { defineComponent, PropType } from 'vue';
 import { Album } from '../models/tracks';
-import { yearDescriptionForAlbum } from '../models/album-helpers';
 import { formatSeconds } from '../view-helpers/time';
 
 export default defineComponent({
@@ -177,7 +176,6 @@ export default defineComponent({
     },
     methods: {
         formatSeconds,
-        yearDescriptionForAlbum,
     }
 });
 </script>
