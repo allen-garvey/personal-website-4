@@ -153,22 +153,18 @@ function initializeImageSwipeHandlers() {
 }
 
 function initializeKeyboardShortcuts() {
-    document.onkeydown = function (e) {
-        //don't do anything if lightbox is invisible
+    document.onkeydown = (e) => {
         if (!isLightboxVisible) {
             return;
         }
-        switch (e.keyCode) {
-            //escape key
-            case 27:
+        switch (e.key) {
+            case 'Escape':
                 hideLightbox();
                 break;
-            //right arrow
-            case 39:
+            case 'ArrowRight':
                 showNextImage();
                 break;
-            //left arrow
-            case 37:
+            case 'ArrowLeft':
                 showPreviousImage();
                 break;
         }
