@@ -6,7 +6,9 @@ import { createDiv } from './dom-helpers';
 
 const FIRST_IMAGE_CLASS = 'first-image';
 const LAST_IMAGE_CLASS = 'last-image';
-const imageLinks = document.querySelectorAll('.post-thumbnails a');
+const imageLinks = document.querySelectorAll(
+    '[data-slideshow-images] a[data-slideshow-image]'
+);
 const slideData = initializeSlideData(imageLinks);
 let currentImageIndex = null;
 let isLightboxVisible = false;
