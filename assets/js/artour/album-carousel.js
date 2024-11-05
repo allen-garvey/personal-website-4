@@ -141,11 +141,11 @@ function initializeImageSwipeHandlers() {
             return;
         }
 
-        //swiped right, show previous image
+        //swiped right
         if (touchEndX > touchStartX) {
             showPreviousImage();
         }
-        //swiped left, show next image
+        //swiped left
         else {
             showNextImage();
         }
@@ -172,7 +172,6 @@ function initializeKeyboardShortcuts() {
 }
 
 function showNextImage() {
-    //stop at the end
     if (
         currentImageIndex >=
         slideshows[currentSlideshowKey].imageLinks.length - 1
@@ -182,7 +181,6 @@ function showNextImage() {
     setVisibleImageAt(currentSlideshowKey, currentImageIndex + 1);
 }
 function showPreviousImage() {
-    //stop at beginning
     if (currentImageIndex <= 0) {
         return;
     }
