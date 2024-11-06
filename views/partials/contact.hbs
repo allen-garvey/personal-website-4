@@ -1,5 +1,5 @@
-<ul class="social-list">
-    {{#each content.socialList}}
+<ul class="contact-list">
+    {{#each content.links}}
         <li>
             {{#if this.url}}
                 <a href="{{ this.url }}">
@@ -7,7 +7,7 @@
                 </a>
             {{else}}
                 <a href="" id="email_link"></a>
-                <noscript>firstname dot lastname at gmail</noscript>
+                <noscript>firstname [dot] lastname [at] gmail</noscript>
             {{/if}}
         </li>
     {{/each}}

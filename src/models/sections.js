@@ -1,5 +1,5 @@
 const about = require('./sections/about');
-const social = require('./sections/social');
+const contact = require('./sections/contact');
 const projects = require('./sections/projects');
 const videos = require('./sections/videos');
 const music = require('./sections/music');
@@ -14,10 +14,10 @@ module.exports = {
         'music',
         'photos',
         'videos',
-        'social',
+        'contact',
     ],
     about,
-    social,
+    contact,
     projects,
     videos,
     music,

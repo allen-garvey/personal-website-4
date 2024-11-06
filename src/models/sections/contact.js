@@ -1,9 +1,9 @@
 module.exports = {
-    slug: 'social',
-    template: 'social',
-    heading: 'Social',
+    slug: 'contact',
+    template: 'contact',
+    heading: 'Contact',
     content: {
-        socialList: [
+        links: [
             {
                 title: 'Email',
             },
