@@ -1,3 +1,5 @@
+const { expandImageUrls } = require('../image-helpers');
+
 const images = [
     {
         caption: null,
@@ -144,16 +146,6 @@ module.exports = {
         url: 'https://strangescenery.com',
     },
     content: {
-        images: images.map((image) => {
-            const ret = {
-                ...image,
-            };
-            Object.keys(image.url).forEach(
-                (key) =>
-                    (ret.url[key] = `https://strangescenery.com${ret.url[key]}`)
-            );
-
-            return ret;
-        }),
+        images: expandImageUrls(images),
     },
 };
