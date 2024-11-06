@@ -5,43 +5,32 @@ const LIGHTBOX_CONTAINER = document.getElementById('lightbox-container');
 const LIGHTBOX_IMAGE = document.getElementById('lightbox-image');
 const CAPTION_BODY = document.querySelector('.caption-body');
 
-let currentSlideshowKey = null;
+let currentSlideshowIndex = null;
 let currentImageIndex = null;
 let isLightboxVisible = false;
 
 const slideshows = initializeSlideshowModels();
 
 function initializeSlideshowModels() {
-    const ret = {};
+    return [...document.querySelectorAll('[data-slideshow-images]')].map(
+        (slideshowParent, slideshowIndex) =>
+            [
+                ...slideshowParent.querySelectorAll('a[data-slideshow-image]'),
+            ].map((link, imageLinkIndex) => {
+                link.onclick = (e) => {
+                    e.preventDefault();
+                    setVisibleImageAt(slideshowIndex, imageLinkIndex);
+                    displayLightbox();
+                };
 
-    document
-        .querySelectorAll('[data-slideshow-images]')
-        .forEach((slideshowParent) => {
-            const key = slideshowParent.dataset.slideshowImages;
-
-            ret[key] = {
-                imageLinks: [
-                    ...slideshowParent.querySelectorAll(
-                        'a[data-slideshow-image]'
-                    ),
-                ].map((link, i) => {
-                    link.onclick = (e) => {
-                        e.preventDefault();
-                        setVisibleImageAt(key, i);
-                        displayLightbox();
-                    };
-
-                    return {
-                        caption: link.dataset.caption,
-                        src: link.dataset.src,
-                        srcset: link.dataset.srcset,
-                        id: link.dataset.slug,
-                    };
-                }),
-            };
-        });
-
-    return ret;
+                return {
+                    caption: link.dataset.caption,
+                    src: link.dataset.src,
+                    srcset: link.dataset.srcset,
+                    id: link.dataset.slug,
+                };
+            })
+    );
 }
 
 function initializeLightbox() {
@@ -59,11 +48,11 @@ function initializeLightbox() {
     rightButton.onclick = showNextImage;
 }
 
-function setVisibleImageAt(slideshowKey, imageIndex) {
-    currentSlideshowKey = slideshowKey;
+function setVisibleImageAt(slideshowIndex, imageIndex) {
+    currentSlideshowIndex = slideshowIndex;
     currentImageIndex = imageIndex;
 
-    const slideshow = slideshows[slideshowKey];
+    const slideshow = slideshows[slideshowIndex];
 
     // hide or show prev / next buttons
     if (imageIndex === 0) {
@@ -72,13 +61,13 @@ function setVisibleImageAt(slideshowKey, imageIndex) {
         LIGHTBOX_CONTAINER.classList.remove(FIRST_IMAGE_CLASS);
     }
 
-    if (imageIndex === slideshow.imageLinks.length - 1) {
+    if (imageIndex === slideshow.length - 1) {
         LIGHTBOX_CONTAINER.classList.add(LAST_IMAGE_CLASS);
     } else {
         LIGHTBOX_CONTAINER.classList.remove(LAST_IMAGE_CLASS);
     }
 
-    const currentImageData = slideshow.imageLinks[imageIndex];
+    const currentImageData = slideshow[imageIndex];
     LIGHTBOX_IMAGE.src = currentImageData.src;
     LIGHTBOX_IMAGE.srcset = currentImageData.srcset;
 
@@ -172,19 +161,16 @@ function initializeKeyboardShortcuts() {
 }
 
 function showNextImage() {
-    if (
-        currentImageIndex >=
-        slideshows[currentSlideshowKey].imageLinks.length - 1
-    ) {
+    if (currentImageIndex >= slideshows[currentSlideshowIndex].length - 1) {
         return;
     }
-    setVisibleImageAt(currentSlideshowKey, currentImageIndex + 1);
+    setVisibleImageAt(currentSlideshowIndex, currentImageIndex + 1);
 }
 function showPreviousImage() {
     if (currentImageIndex <= 0) {
         return;
     }
-    setVisibleImageAt(currentSlideshowKey, currentImageIndex - 1);
+    setVisibleImageAt(currentSlideshowIndex, currentImageIndex - 1);
 }
 
 export function initializeDisplayAlbumLightbox() {

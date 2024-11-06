@@ -144,7 +144,6 @@ module.exports = {
         url: 'https://strangescenery.com',
     },
     content: {
-        slideshowKey: 'artwork',
         images: images.map((image) => {
             const ret = {
                 ...image,
