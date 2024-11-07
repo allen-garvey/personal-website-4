@@ -6,6 +6,10 @@ $unobtrusive-link-color: #888;
     gap: 1em;
     margin-bottom: 2rem;
 
+    @media screen and (min-width: 541px) {
+        justify-content: center;
+    }
+
     a {
         color: $unobtrusive-link-color;
     }
