@@ -142,6 +142,7 @@ module.exports = {
     slug: 'photos',
     template: 'slideshow',
     heading: 'Photography & Photo Art',
+    navHeading: 'Photos',
     headingLink: {
         text: 'Instagram',
         url: 'https://www.instagram.com/strangescenery/',

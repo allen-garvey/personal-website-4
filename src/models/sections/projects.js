@@ -72,7 +72,8 @@ const projects = [
 module.exports = {
     slug: 'projects',
     template: 'projects',
-    heading: 'Projects',
+    heading: 'Coding Projects',
+    navHeading: 'Coding',
     headingLink: {
         text: 'GitHub',
         url: 'https://github.com/allen-garvey',

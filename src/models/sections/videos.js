@@ -25,6 +25,7 @@ module.exports = {
     slug: 'videos',
     template: 'videos',
     heading: 'Videos and Rescores',
+    navHeading: 'Videos',
     headingLink: {
         text: 'YouTube',
         url: 'https://www.youtube.com/@allengarvey',

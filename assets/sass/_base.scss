@@ -108,7 +108,7 @@ a {
 }
 
 .main-content {
-    padding: variables.$spacing-unit * 2 variables.$project-icon-width;
+    padding: 0.5rem variables.$project-icon-width 4rem;
 
     @include mixins.media-query(variables.$on-laptop) {
         padding-right: math.div(variables.$spacing-unit, 2);

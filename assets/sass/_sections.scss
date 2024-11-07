@@ -1,3 +1,16 @@
+$unobtrusive-link-color: #888;
+
+.sections-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    margin-bottom: 2rem;
+
+    a {
+        color: $unobtrusive-link-color;
+    }
+}
+
 .section-header {
     display: flex;
     flex-wrap: wrap;
@@ -10,6 +23,6 @@
 }
 
 a.section-heading-link {
-    color: #888;
+    color: $unobtrusive-link-color;
     font-size: 0.9rem;
 }

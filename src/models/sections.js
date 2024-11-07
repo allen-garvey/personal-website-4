@@ -6,16 +6,16 @@ const music = require('./sections/music');
 const artwork = require('./sections/artwork');
 const photos = require('./sections/photos');
 
+const nav = [projects, artwork, music, photos, videos, contact].map(
+    (module) => ({
+        slug: module.slug,
+        heading: module.navHeading || module.heading,
+    })
+);
+
 module.exports = {
-    list: [
-        'about',
-        'projects',
-        'artwork',
-        'music',
-        'photos',
-        'videos',
-        'contact',
-    ],
+    nav,
+    list: [about.slug].concat(nav.map((item) => item.slug)),
     about,
     contact,
     projects,

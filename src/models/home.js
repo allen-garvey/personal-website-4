@@ -3,17 +3,18 @@ const webpack = require('../webpack');
 const sections = require('./sections');
 const header = require('./header');
 
-async function getHomeContext(fs, websocketPort=null){
+async function getHomeContext(fs, websocketPort = null) {
     const scriptContent = await webpack.getJs(fs);
 
     const context = {
+        nav: sections.nav,
         header,
         sections,
         stylesFilename: webpackConstants.stylesOutputFilename,
         scriptContent,
     };
 
-    if(websocketPort){
+    if (websocketPort) {
         context.websocketPort = websocketPort;
     }
 

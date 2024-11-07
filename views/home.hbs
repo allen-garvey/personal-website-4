@@ -1,4 +1,11 @@
 <main class="container main-content">
+    <ul class="sections-nav" data-role="sections-nav">
+        {{#each nav}}
+            <li>
+                <a href="#{{this.slug}}">{{this.heading}}</a>
+            </li>
+        {{/each}}
+    </ul>
     {{#each sections.list}}
         {{#with (lookup @root.sections this)}}
             <section id="{{ slug }}">
