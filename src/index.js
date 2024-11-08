@@ -16,13 +16,13 @@ let serverStarted = false;
 
 webpackCompiler.watch({}, async (err, stats) => {
     if (err) throw err;
-    console.log(
-        `webpack compilation complete ${dateHelpers.currentTimestampString()} websockets open: ${
-            websocketConnectionsMap.size
-        }`
-    );
-
     const info = stats.toJson();
+
+    console.log(
+        `webpack compilation complete ${dateHelpers.currentTimestampString()} in ${
+            info.time / 1000
+        }s websockets open: ${websocketConnectionsMap.size}`
+    );
 
     if (stats.hasErrors()) {
         console.error(info.errors);
