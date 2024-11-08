@@ -1,28 +1,26 @@
 const exphbs = require('express-handlebars');
 const path = require('path');
-const stingHelpers = require('../helpers/string-helpers');
 
-function getBaseConfig(){
+function getBaseConfig() {
     return {
         defaultLayout: 'main',
         extname: '.hbs',
         helpers: {
-            imageUrl(imageName){
+            imageUrl(imageName) {
                 return `/images/${imageName}`;
             },
-            iconUrl(imageName){
+            iconUrl(imageName) {
                 return `/images/icons/${imageName}`;
             },
-            smartenQuotes: stingHelpers.smartenQuotes,
-        }
+        },
     };
 }
 
-function createEngine(){
+function createEngine() {
     return exphbs.create(getBaseConfig()).engine;
 }
 
-function createCompiler(){
+function createCompiler() {
     const config = {
         ...getBaseConfig(),
         layoutsDir: path.resolve(__dirname, '..', '..', 'views', 'layouts'),

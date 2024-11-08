@@ -12,11 +12,11 @@
             </div>
             <div class="project-content">
                 <h3 class="project-title">
-                    <a href="{{ this.url }}">{{ smartenQuotes this.title }}</a>
+                    <a href="{{ this.url }}">{{ this.title }}</a>
                 </h3>     
                 <div>
                     {{#each this.description}}
-                        <p>{{{ smartenQuotes this }}}</p>
+                        <p>{{{ this }}}</p>
                     {{/each}}
                     <div class="project-links">
                         <a href="{{ this.githubUrl }}">GitHub</a>

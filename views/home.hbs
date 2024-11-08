@@ -10,7 +10,7 @@
         {{#with (lookup @root.sections this)}}
             <section id="{{ slug }}">
                 <div class="section-header">
-                    <h2 class="section-heading">{{ smartenQuotes heading }}</h2>
+                    <h2 class="section-heading">{{ heading }}</h2>
                     {{#if headingLink}}
                         <a href="{{ headingLink.url }}" class="section-heading-link">{{headingLink.text}}</a>
                     {{/if}}
