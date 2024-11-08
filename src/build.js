@@ -54,8 +54,9 @@ async function outputIndex() {
 
 async function build() {
     try {
-        await webpack.compile(webpackCompiler);
-        console.log('Webpack compile complete');
+        const stats = await webpack.compile(webpackCompiler);
+        const info = stats.toJson();
+        console.log(`Webpack compile complete in ${info.time / 1000}s`);
         await Promise.all([outputStyles(), outputIndex()]);
         console.log(`Build ready for deploy in ${webpackConstants.outputPath}`);
     } catch (error) {
