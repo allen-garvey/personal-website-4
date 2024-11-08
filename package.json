@@ -4,7 +4,7 @@
   "description": "Personal website of Allen Garvey",
   "main": "src/index.js",
   "scripts": {
-    "start": "nodemon src/index.js",
+    "start": "node src/index.js",
     "deploy": "node src/build.js"
   },
   "repository": {
@@ -25,7 +25,6 @@
     "express-handlebars": "^8.0.1",
     "memfs": "^4.14.0",
     "mini-css-extract-plugin": "^2.9.2",
-    "nodemon": "^3.1.7",
     "sass": "^1.80.6",
     "sass-loader": "^16.0.3",
     "ts-loader": "^9.5.1",

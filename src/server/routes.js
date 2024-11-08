@@ -1,10 +1,12 @@
 const path = require('path');
 const serveImage = require('./serve-image');
 const webpackConstants = require('../../webpack/constants');
-const home = require('../models/home');
+
+const { requireUncached } = require('../helpers/live-reload');
 
 function addRoutes(app, fs, websocketPort) {
     app.get('/', async (req, res) => {
+        const home = requireUncached(require.resolve('../models/home'));
         const homeContext = await home.getHomeContext(fs, websocketPort);
         return res.render('home', homeContext);
     });

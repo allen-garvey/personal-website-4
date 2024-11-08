@@ -1,10 +1,12 @@
-const about = require('./sections/about');
-const contact = require('./sections/contact');
-const projects = require('./sections/projects');
-const videos = require('./sections/videos');
-const music = require('./sections/music');
-const artwork = require('./sections/artwork');
-const photos = require('./sections/photos');
+const { requireUncached } = require('../helpers/live-reload');
+
+const about = requireUncached(require.resolve('./sections/about'));
+const contact = requireUncached(require.resolve('./sections/contact'));
+const projects = requireUncached(require.resolve('./sections/projects'));
+const videos = requireUncached(require.resolve('./sections/videos'));
+const music = requireUncached(require.resolve('./sections/music'));
+const artwork = requireUncached(require.resolve('./sections/artwork'));
+const photos = requireUncached(require.resolve('./sections/photos'));
 
 const nav = [projects, artwork, music, photos, videos, contact].map(
     (module) => ({
