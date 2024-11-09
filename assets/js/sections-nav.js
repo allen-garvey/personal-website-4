@@ -1,6 +1,12 @@
 export const initSectionsNav = () => {
     if (location.hash) {
-        document.querySelector(location.hash)?.scrollIntoView();
+        setTimeout(
+            () =>
+                document
+                    .querySelector(location.hash)
+                    ?.scrollIntoView({ behavior: 'smooth' }),
+            500
+        );
     }
 
     document.querySelectorAll('[data-role="sections-nav"] a').forEach((el) => {
