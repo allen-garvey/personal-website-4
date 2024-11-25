@@ -1,5 +1,4 @@
 const path = require('path');
-const serveImage = require('./serve-image');
 const webpackConstants = require('../../webpack/constants');
 
 const { requireUncached } = require('../helpers/live-reload');
@@ -23,18 +22,6 @@ function addRoutes(app, fs, websocketPort) {
                 res.send(data);
             }
         );
-    });
-
-    app.get('/images/:folder/:imageName', (req, res) => {
-        serveImage(
-            req.params.imageName,
-            res,
-            path.resolve(webpackConstants.imagesPath, req.params.folder)
-        );
-    });
-
-    app.get('/images/:imageName', (req, res) => {
-        serveImage(req.params.imageName, res, webpackConstants.imagesPath);
     });
 }
 
