@@ -7,7 +7,7 @@ module.exports = {
     mode: 'development',
     entry: `${__dirname}/../assets/js/index.js`,
     output: {
-        path: webpackConstants.jsOutputPath,
+        path: webpackConstants.outputPath,
         filename: webpackConstants.jsOutputFilename,
     },
     module: {

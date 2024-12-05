@@ -12,7 +12,7 @@ function createCompiler(fs, config) {
 async function getJs(fs) {
     return fs.readFile(
         path.resolve(
-            webpackConstants.jsOutputPath,
+            webpackConstants.outputPath,
             webpackConstants.jsOutputFilename
         )
     );
