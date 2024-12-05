@@ -6,10 +6,24 @@ const { requireUncached } = require('../helpers/live-reload');
 const createStaticFileHandler = (filename, mimeType, fs) => (req, res) =>
     fs
         .readFile(path.resolve(webpackConstants.outputPath, filename))
-        .then(data => {
-            res.setHeader('Content-Type', mimeType);
-            res.send(data);
-        });
+        .catch(error => {
+            if (error.code === 'ENOENT') {
+                res.sendStatus(404);
+            } else {
+                console.error(error);
+            }
+            throw error;
+        })
+        .then(
+            data => {
+                if (data === null) {
+                    return;
+                }
+                res.setHeader('Content-Type', mimeType);
+                res.send(data);
+            },
+            () => {}
+        );
 
 function addRoutes(app, fs, websocketPort) {
     app.get('/', async (req, res) => {

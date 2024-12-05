@@ -12,7 +12,8 @@ require('./websockets/websocket').websocketSetup(
 );
 const dateHelpers = require('./helpers/date-helpers');
 
-let serverStarted = false;
+const url = `http://localhost:${port}`;
+server.listen(port, () => console.log(`Listening at ${url}`));
 
 webpackCompiler.watch({}, async (err, stats) => {
     if (err) throw err;
@@ -32,13 +33,7 @@ webpackCompiler.watch({}, async (err, stats) => {
         console.warn(info.warnings);
     }
 
-    if (!serverStarted) {
-        serverStarted = true;
-        const url = `http://localhost:${port}`;
-        server.listen(port, () => console.log(`Listening at ${url}`));
-    } else {
-        websocketConnectionsMap.forEach(ws => {
-            ws.send('webpack recompiled');
-        });
-    }
+    websocketConnectionsMap.forEach(ws => {
+        ws.send('webpack recompiled');
+    });
 });
