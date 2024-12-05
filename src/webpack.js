@@ -9,15 +9,6 @@ function createCompiler(fs, config) {
     return compiler;
 }
 
-async function getJs(fs) {
-    return fs.readFile(
-        path.resolve(
-            webpackConstants.outputPath,
-            webpackConstants.jsOutputFilename
-        )
-    );
-}
-
 async function compile(compiler) {
     return new Promise((resolve, reject) => {
         compiler.run((err, stats) => {
@@ -40,6 +31,5 @@ async function compile(compiler) {
 
 module.exports = {
     createCompiler,
-    getJs,
     compile,
 };

@@ -1,16 +1,14 @@
 const webpackConstants = require('../../webpack/constants');
-const webpack = require('../webpack');
 const { requireUncached } = require('../helpers/live-reload');
 
-async function getHomeContext(fs, websocketPort = null) {
+async function getHomeContext(websocketPort = null) {
     const sections = requireUncached(require.resolve('./sections'));
-    const scriptContent = await webpack.getJs(fs);
 
     const context = {
         nav: sections.nav,
         sections,
         stylesFilename: webpackConstants.stylesOutputFilename,
-        scriptContent,
+        scriptFilename: webpackConstants.jsOutputFilename,
     };
 
     if (websocketPort) {

@@ -14,7 +14,7 @@
         {{{ body }}}
     </div>
     {{>lightbox}}
-    <script>{{{ scriptContent }}}</script>
+    <script src="/{{ scriptFilename }}"></script>
     {{#if websocketPort}}
         {{>websocket-js websocketPort=websocketPort }}
     {{/if}}
