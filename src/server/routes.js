@@ -14,7 +14,7 @@ const createStaticFileHandler = (filename, mimeType, fs) => (req, res) =>
 function addRoutes(app, fs, websocketPort) {
     app.get('/', async (req, res) => {
         const home = requireUncached(require.resolve('../models/home'));
-        const homeContext = await home.getHomeContext(websocketPort);
+        const homeContext = home.getHomeContext(websocketPort);
         return res.render('home', homeContext);
     });
 

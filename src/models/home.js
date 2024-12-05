@@ -1,7 +1,7 @@
 const webpackConstants = require('../../webpack/constants');
 const { requireUncached } = require('../helpers/live-reload');
 
-async function getHomeContext(websocketPort = null) {
+function getHomeContext(websocketPort = null) {
     const sections = requireUncached(require.resolve('./sections'));
 
     const context = {

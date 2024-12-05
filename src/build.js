@@ -14,7 +14,7 @@ async function outputIndex() {
         `${handlebarsCompiler.defaultLayout}.hbs`
     );
 
-    const homeContext = await home.getHomeContext();
+    const homeContext = home.getHomeContext();
     const body = await handlebarsCompiler.render(homeTemplatePath, homeContext);
     const layoutContext = Object.assign({}, homeContext, { body });
     const homeHtml = await handlebarsCompiler.render(
