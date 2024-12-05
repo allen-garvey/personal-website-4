@@ -1,7 +1,7 @@
-const realFs = require('fs');
+const realFs = require('fs/promises');
 const path = require('path');
 const { createFsFromVolume, Volume } = require('memfs');
-const fs = createFsFromVolume(new Volume());
+const fs = createFsFromVolume(new Volume()).promises;
 const webpackConstants = require('../webpack/constants');
 const webpack = require('./webpack');
 const webpackConfig = require('../webpack/webpack.production.config');
@@ -14,15 +14,9 @@ async function outputStyles() {
         webpackConstants.outputPath,
         webpackConstants.stylesOutputFilename
     );
-    return new Promise((resolve, reject) => {
-        fs.readFile(stylesPath, (err, data) => {
-            if (err) return reject(err);
-            realFs.writeFile(stylesPath, data, (err) => {
-                if (err) return reject(err);
-                return resolve();
-            });
-        });
-    });
+    return fs
+        .readFile(stylesPath)
+        .then(data => realFs.writeFile(stylesPath, data));
 }
 
 async function outputIndex() {
@@ -44,12 +38,7 @@ async function outputIndex() {
     );
     const indexPath = path.resolve(webpackConstants.outputPath, 'index.html');
 
-    return new Promise((resolve, reject) => {
-        realFs.writeFile(indexPath, homeHtml, (err) => {
-            if (err) return reject(err);
-            return resolve();
-        });
-    });
+    return realFs.writeFile(indexPath, homeHtml);
 }
 
 async function build() {
