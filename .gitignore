@@ -16,8 +16,6 @@ Thumbs.db
 *.woff
 *.zip
 .directory
-php/inc/js/*
-php/inc/css/*
 public_html/*.html
 public_html/*.css
 public_html/*.js
