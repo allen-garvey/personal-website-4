@@ -10,19 +10,19 @@ function addRoutes(app, fs, websocketPort) {
         return res.render('home', homeContext);
     });
 
-    app.get(`/${webpackConstants.stylesOutputFilename}`, (req, res) => {
-        fs.readFile(
-            path.resolve(
-                webpackConstants.outputPath,
-                webpackConstants.stylesOutputFilename
-            ),
-            (err, data) => {
-                if (err) throw err;
+    app.get(`/${webpackConstants.stylesOutputFilename}`, (req, res) =>
+        fs
+            .readFile(
+                path.resolve(
+                    webpackConstants.outputPath,
+                    webpackConstants.stylesOutputFilename
+                )
+            )
+            .then(data => {
                 res.setHeader('Content-Type', 'text/css');
                 res.send(data);
-            }
-        );
-    });
+            })
+    );
 }
 
 module.exports = {
