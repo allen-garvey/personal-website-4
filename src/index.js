@@ -1,7 +1,7 @@
 const port = 3000;
 
 const { createFsFromVolume, Volume } = require('memfs');
-const fs = createFsFromVolume(new Volume());
+const fs = createFsFromVolume(new Volume()).promises;
 const webpackConfig = require('../webpack/webpack.config');
 const webpackCompiler = require('./webpack').createCompiler(fs, webpackConfig);
 const server = require('./server/index').createServer(fs, port);
@@ -37,7 +37,7 @@ webpackCompiler.watch({}, async (err, stats) => {
         const url = `http://localhost:${port}`;
         server.listen(port, () => console.log(`Listening at ${url}`));
     } else {
-        websocketConnectionsMap.forEach((ws) => {
+        websocketConnectionsMap.forEach(ws => {
             ws.send('webpack recompiled');
         });
     }

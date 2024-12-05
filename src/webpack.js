@@ -10,18 +10,12 @@ function createCompiler(fs, config) {
 }
 
 async function getJs(fs) {
-    return new Promise((resolve, reject) => {
-        fs.readFile(
-            path.resolve(
-                webpackConstants.jsOutputPath,
-                webpackConstants.jsOutputFilename
-            ),
-            (err, data) => {
-                if (err) return reject(err);
-                resolve(data);
-            }
-        );
-    });
+    return fs.readFile(
+        path.resolve(
+            webpackConstants.jsOutputPath,
+            webpackConstants.jsOutputFilename
+        )
+    );
 }
 
 async function compile(compiler) {
