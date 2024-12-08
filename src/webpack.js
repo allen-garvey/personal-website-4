@@ -1,6 +1,5 @@
 const path = require('path');
 const webpack = require('webpack');
-const webpackConstants = require('../webpack/constants');
 
 function createCompiler(fs, config) {
     const compiler = webpack(config);
