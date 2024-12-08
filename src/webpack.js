@@ -8,27 +8,6 @@ function createCompiler(fs, config) {
     return compiler;
 }
 
-async function compile(compiler) {
-    return new Promise((resolve, reject) => {
-        compiler.run((err, stats) => {
-            if (err) return reject(err);
-
-            const info = stats.toJson();
-
-            if (stats.hasErrors()) {
-                return reject(info.errors);
-            }
-
-            if (stats.hasWarnings()) {
-                console.warn(info.warnings);
-            }
-
-            return resolve(stats);
-        });
-    });
-}
-
 module.exports = {
     createCompiler,
-    compile,
 };
