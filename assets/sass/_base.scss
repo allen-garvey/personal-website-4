@@ -2,38 +2,62 @@
 @use 'variables';
 @use 'mixins';
 
+html {
+    --color-text: #000;
+    --color-background: #fafff6;
+    --color-link: #1467d3;
+    --color-link-visited: purple;
+
+    --color-media-controls-background: #314a31;
+}
+
+@media (prefers-color-scheme: dark) {
+    html {
+        --color-text: #fff;
+        --color-background: #121;
+        --color-link: #4b99ff;
+        --color-link-visited: rgb(201, 108, 201);
+
+        --color-media-controls-background: #1f3e1f;
+    }
+}
+
 /**
  * Reset some basic elements
  */
-body, h1, h2, h3, p, ul{
+body,
+h1,
+h2,
+h3,
+p,
+ul {
     margin: 0;
     padding: 0;
 }
-
 
 /**
  * Basic styling
  */
 body {
-    font-family: 'Noto Sans', 'Roboto', -apple-system, 'Helvetica Neue', Helvetica, 'Ubuntu', 'Calibri', 'Arial', sans-serif;
+    font-family: 'Noto Sans', 'Roboto', -apple-system, 'Helvetica Neue',
+        Helvetica, 'Ubuntu', 'Calibri', 'Arial', sans-serif;
     line-height: 1.5;
-    --body-text-color: #000;
-    color: var(--body-text-color);
-    background-color: #fafff6;
+    color: var(--color-text);
+    background-color: var(--color-background);
     -webkit-text-size-adjust: 100%;
-    -webkit-font-feature-settings: "kern" 1;
-    -moz-font-feature-settings: "kern" 1;
-    -o-font-feature-settings: "kern" 1;
-    font-feature-settings: "kern" 1;
+    -webkit-font-feature-settings: 'kern' 1;
+    -moz-font-feature-settings: 'kern' 1;
+    -o-font-feature-settings: 'kern' 1;
+    font-feature-settings: 'kern' 1;
     font-kerning: normal;
 }
-
-
 
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
-h1, h2, h3{
+h1,
+h2,
+h3 {
     margin-bottom: 1rem;
 }
 
@@ -49,51 +73,34 @@ section {
     }
 }
 
-
-/**
- * Images
- */
 img {
     max-width: 100%;
     vertical-align: middle;
 }
 
-
-/**
- * Lists
- */
-ul{
+ul {
     list-style-type: none;
 }
 
-
-/**
- * Headings
- */
-h1{
+h1 {
     font-weight: 600;
     font-size: 3.157rem;
 }
-h2{
+h2 {
     font-weight: 600;
     font-size: 1.777rem;
 }
-h3{
+h3 {
     font-size: 1.25rem;
     font-weight: 400;
 }
 
-
-
-/**
- * Links
- */
 a {
-    color: #1467d3;
+    color: var(--color-link);
     text-decoration: none;
 
     &:visited {
-        color: purple;
+        color: var(--color-link-visited);
     }
 
     &:hover {
@@ -112,25 +119,10 @@ a {
 
     @include mixins.media-query(variables.$on-laptop) {
         padding-right: math.div(variables.$spacing-unit, 2);
-        padding-left:  math.div(variables.$spacing-unit, 2);
+        padding-left: math.div(variables.$spacing-unit, 2);
     }
 }
 
-.page-content{
+.page-content {
     margin-bottom: 12em;
 }
-
-@media (prefers-color-scheme: dark) {
-    body {
-        --body-text-color: #fff;
-        background-color: #121;
-    }
-    a {
-        color: #4b99ff;
-    
-        &:visited {
-            color: rgb(201, 108, 201);
-        }
-    }
-}
-

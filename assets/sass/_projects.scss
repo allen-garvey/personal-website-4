@@ -1,43 +1,43 @@
 @use 'variables';
 @use 'mixins';
 
-.project-links{
-	margin-top: 0.5em;
-	display: flex;
-	gap: 2.5em;
+.project-links {
+    margin-top: 0.5em;
+    display: flex;
+    gap: 2.5em;
 }
 
 .projects-list {
-	margin-left: variables.$project-icon-width * -1;
+    margin-left: variables.$project-icon-width * -1;
 
-	@include mixins.media-query(variables.$on-laptop) {
+    @include mixins.media-query(variables.$on-laptop) {
         margin-left: 0;
     }
 
-	li{
-		margin-bottom: variables.$spacing-unit * 1.5;
-		display: flex;
+    li {
+        margin-bottom: variables.$spacing-unit * 1.5;
+        display: flex;
 
-		&:last-of-type{
-			margin-bottom: 0;
-		}
-	}
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
 }
 
-.project-title{
-	margin-bottom: 0.1em;
-	a{
-		color: var(--body-text-color);
-	}
+.project-title {
+    margin-bottom: 0.1em;
+    a {
+        color: var(--color-text);
+    }
 }
-.project-logo{
-	padding: 1em;
-	flex-basis: 110px;
+.project-logo {
+    padding: 1em;
+    flex-basis: 110px;
 
-	@include mixins.media-query(variables.$on-laptop) {
+    @include mixins.media-query(variables.$on-laptop) {
         display: none;
-	}
+    }
 }
-.project-content{
-	flex-basis: 95%;
+.project-content {
+    flex-basis: 95%;
 }
