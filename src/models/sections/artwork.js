@@ -92,13 +92,13 @@ const images = [
     },
     {
         caption: null,
-        description: 'A digital painting of a woman',
-        id: 346,
+        description: 'A digital painting of a man',
+        id: 423,
         url: {
-            large: '/media/images/woman-with-halo-bangs-painting-med.jpg',
-            medium: '/media/images/woman-with-halo-bangs-painting-med.jpg',
-            small: '/media/images/woman-with-halo-bangs-painting-sm.jpg',
-            thumbnail: '/media/images/woman-with-halo-bangs-painting-thumb.jpg',
+            large: '/media/images/2025-painting-8-med.webp',
+            medium: '/media/images/2025-painting-8-med.webp',
+            small: '/media/images/2025-painting-8-sm.webp',
+            thumbnail: '/media/images/2025-painting-8-thumb.webp',
         },
     },
     {
@@ -126,13 +126,13 @@ const images = [
     },
     {
         caption: null,
-        description: 'A painting of a woman',
-        id: 375,
+        description: 'A digital painting of a woman',
+        id: 415,
         url: {
-            large: '/media/images/2024-purple-lady-n-painting-med.jpg',
-            medium: '/media/images/2024-purple-lady-n-painting-med.jpg',
-            small: '/media/images/2024-purple-lady-n-painting-sm.jpg',
-            thumbnail: '/media/images/2024-purple-lady-n-painting-thumb.jpg',
+            large: '/media/images/2025-painting-7-med.webp',
+            medium: '/media/images/2025-painting-7-med.webp',
+            small: '/media/images/2025-painting-7-sm.webp',
+            thumbnail: '/media/images/2025-painting-7-thumb.webp',
         },
     },
 ];
