@@ -25,14 +25,13 @@ const images = [
     },
     {
         caption: null,
-        description: 'Digital painting of a bungalow style house',
-        id: 153,
+        description: 'Digital painting of flowers on a deck',
+        id: 229,
         url: {
-            large: '/media/images/stamford-roadside-bungalow-painting-lg.jpg',
-            medium: '/media/images/stamford-roadside-bungalow-painting-med.jpg',
-            small: '/media/images/stamford-roadside-bungalow-painting-sm.jpg',
-            thumbnail:
-                '/media/images/stamford-roadside-bungalow-painting-thumb.jpg',
+            large: '/media/images/deck-flower-garden-painting-lg.jpg',
+            medium: '/media/images/deck-flower-garden-painting-med.jpg',
+            small: '/media/images/deck-flower-garden-painting-sm.jpg',
+            thumbnail: '/media/images/deck-flower-garden-painting-thumb.jpg',
         },
     },
     {
@@ -48,13 +47,13 @@ const images = [
     },
     {
         caption: null,
-        description: 'Crayon, pencil and ink drawing of peeling tree bark',
-        id: 172,
+        description: 'A digital painting of a man',
+        id: 423,
         url: {
-            large: '/media/images/peeling-tree-med.jpg',
-            medium: '/media/images/peeling-tree-med.jpg',
-            small: '/media/images/peeling-tree-sm.jpg',
-            thumbnail: '/media/images/peeling-tree-thumb.jpg',
+            large: '/media/images/2025-painting-8-med.webp',
+            medium: '/media/images/2025-painting-8-med.webp',
+            small: '/media/images/2025-painting-8-sm.webp',
+            thumbnail: '/media/images/2025-painting-8-thumb.webp',
         },
     },
     {
@@ -77,51 +76,6 @@ const images = [
             medium: '/media/images/shadow-lennon-tan-med.jpg',
             small: '/media/images/shadow-lennon-tan-sm.jpg',
             thumbnail: '/media/images/shadow-lennon-tan-thumb.jpg',
-        },
-    },
-    {
-        caption: null,
-        description: 'Digital painting of flowers on a deck',
-        id: 229,
-        url: {
-            large: '/media/images/deck-flower-garden-painting-lg.jpg',
-            medium: '/media/images/deck-flower-garden-painting-med.jpg',
-            small: '/media/images/deck-flower-garden-painting-sm.jpg',
-            thumbnail: '/media/images/deck-flower-garden-painting-thumb.jpg',
-        },
-    },
-    {
-        caption: null,
-        description: 'A digital painting of a man',
-        id: 423,
-        url: {
-            large: '/media/images/2025-painting-8-med.webp',
-            medium: '/media/images/2025-painting-8-med.webp',
-            small: '/media/images/2025-painting-8-sm.webp',
-            thumbnail: '/media/images/2025-painting-8-thumb.webp',
-        },
-    },
-    {
-        caption: null,
-        description: 'A painting of the interior of a house',
-        id: 349,
-        url: {
-            large: '/media/images/midnight-cabin-interior-painting-med.jpg',
-            medium: '/media/images/midnight-cabin-interior-painting-med.jpg',
-            small: '/media/images/midnight-cabin-interior-painting-sm.jpg',
-            thumbnail:
-                '/media/images/midnight-cabin-interior-painting-thumb.jpg',
-        },
-    },
-    {
-        caption: null,
-        description: 'A painting of a cabin',
-        id: 356,
-        url: {
-            large: '/media/images/colorado-wood-cabin-painting-lg.jpg',
-            medium: '/media/images/colorado-wood-cabin-painting-med.jpg',
-            small: '/media/images/colorado-wood-cabin-painting-sm.jpg',
-            thumbnail: '/media/images/colorado-wood-cabin-painting-thumb.jpg',
         },
     },
     {
