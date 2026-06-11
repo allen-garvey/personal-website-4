@@ -37,17 +37,6 @@ const images = [
     },
     {
         caption: null,
-        description: 'Red abstract photo art of twisting buildings',
-        id: 381,
-        url: {
-            large: '/media/images/photos-red-viginette-oilify-lg.jpg',
-            medium: '/media/images/photos-red-viginette-oilify-med.jpg',
-            small: '/media/images/photos-red-viginette-oilify-sm.jpg',
-            thumbnail: '/media/images/photos-red-viginette-oilify-thumb.jpg',
-        },
-    },
-    {
-        caption: null,
         description: 'Photo art of tree bark and a terrarium',
         id: 389,
         url: {
@@ -56,40 +45,6 @@ const images = [
             small: '/media/images/photos-crystal-remembrances-sphere-sm.jpg',
             thumbnail:
                 '/media/images/photos-crystal-remembrances-sphere-thumb.jpg',
-        },
-    },
-    {
-        caption: null,
-        description: 'A photo of the stars in the sky at night',
-        id: 382,
-        url: {
-            large: '/media/images/photos-starry-night-lg.jpg',
-            medium: '/media/images/photos-starry-night-med.jpg',
-            small: '/media/images/photos-starry-night-sm.jpg',
-            thumbnail: '/media/images/photos-starry-night-thumb.jpg',
-        },
-    },
-    {
-        caption: null,
-        description: 'A photo of a suburban street in autumn',
-        id: 378,
-        url: {
-            large: '/media/images/photos-autumn-street-lg.jpg',
-            medium: '/media/images/photos-autumn-street-med.jpg',
-            small: '/media/images/photos-autumn-street-sm.jpg',
-            thumbnail: '/media/images/photos-autumn-street-thumb.jpg',
-        },
-    },
-    {
-        caption: null,
-        description:
-            'A photo of three people on top of a mountain looking at the sea',
-        id: 383,
-        url: {
-            large: '/media/images/photos-tauranga-lg.jpg',
-            medium: '/media/images/photos-tauranga-med.jpg',
-            small: '/media/images/photos-tauranga-sm.jpg',
-            thumbnail: '/media/images/photos-tauranga-thumb.jpg',
         },
     },
     {
@@ -112,28 +67,6 @@ const images = [
             medium: '/media/images/photos-torshavn-house-med.jpg',
             small: '/media/images/photos-torshavn-house-sm.jpg',
             thumbnail: '/media/images/photos-torshavn-house-thumb.jpg',
-        },
-    },
-    {
-        caption: null,
-        description: 'A photo of metal sphere sculpture',
-        id: 384,
-        url: {
-            large: '/media/images/photos-wellington-sphere-lg.jpg',
-            medium: '/media/images/photos-wellington-sphere-med.jpg',
-            small: '/media/images/photos-wellington-sphere-sm.jpg',
-            thumbnail: '/media/images/photos-wellington-sphere-thumb.jpg',
-        },
-    },
-    {
-        caption: null,
-        description: 'A photo of bridge',
-        id: 388,
-        url: {
-            large: '/media/images/photos-forth-bridge-lg.jpg',
-            medium: '/media/images/photos-forth-bridge-med.jpg',
-            small: '/media/images/photos-forth-bridge-sm.jpg',
-            thumbnail: '/media/images/photos-forth-bridge-thumb.jpg',
         },
     },
 ];

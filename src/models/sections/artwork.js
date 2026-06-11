@@ -36,6 +36,17 @@ const images = [
     },
     {
         caption: null,
+        description: 'Portrait of a man on tan paper',
+        id: 212,
+        url: {
+            large: '/media/images/shadow-lennon-tan-med.jpg',
+            medium: '/media/images/shadow-lennon-tan-med.jpg',
+            small: '/media/images/shadow-lennon-tan-sm.jpg',
+            thumbnail: '/media/images/shadow-lennon-tan-thumb.jpg',
+        },
+    },
+    {
+        caption: null,
         description: 'Crayon drawing of a cone flower',
         id: 166,
         url: {
@@ -54,39 +65,6 @@ const images = [
             medium: '/media/images/2025-painting-8-med.webp',
             small: '/media/images/2025-painting-8-sm.webp',
             thumbnail: '/media/images/2025-painting-8-thumb.webp',
-        },
-    },
-    {
-        caption: null,
-        description: 'Crayon and ink drawing of a withered maple leaf',
-        id: 176,
-        url: {
-            large: '/media/images/withered-maple-leaf-med.jpg',
-            medium: '/media/images/withered-maple-leaf-med.jpg',
-            small: '/media/images/withered-maple-leaf-sm.jpg',
-            thumbnail: '/media/images/withered-maple-leaf-thumb.jpg',
-        },
-    },
-    {
-        caption: null,
-        description: 'Portrait of a man on tan paper',
-        id: 212,
-        url: {
-            large: '/media/images/shadow-lennon-tan-med.jpg',
-            medium: '/media/images/shadow-lennon-tan-med.jpg',
-            small: '/media/images/shadow-lennon-tan-sm.jpg',
-            thumbnail: '/media/images/shadow-lennon-tan-thumb.jpg',
-        },
-    },
-    {
-        caption: null,
-        description: 'A digital painting of a woman',
-        id: 415,
-        url: {
-            large: '/media/images/2025-painting-7-med.webp',
-            medium: '/media/images/2025-painting-7-med.webp',
-            small: '/media/images/2025-painting-7-sm.webp',
-            thumbnail: '/media/images/2025-painting-7-thumb.webp',
         },
     },
 ];
