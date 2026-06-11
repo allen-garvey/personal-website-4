@@ -6,7 +6,6 @@
                     <th :class="$style.playButtonColumn"></th>
                     <th :class="$style.titleColumn">Title</th>
                     <th :class="$style.timeColumn">Time</th>
-                    <th :class="$style.yearColumn">Year</th>
                 </tr>
             </thead>
             <tbody>
@@ -42,7 +41,6 @@
                     </td>
                     <td>{{ track.title }}</td>
                     <td>{{ formatSeconds(track.length) }}</td>
-                    <td>{{ track.year }}</td>
                 </tr>
             </tbody>
         </table>
@@ -69,9 +67,6 @@
 }
 .timeColumn {
     width: 6em;
-}
-.yearColumn {
-    width: 4em;
 }
 .shareColumn {
     width: 40px;
